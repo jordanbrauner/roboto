@@ -1,0 +1,62 @@
+<div class="form-container">
+  <div id="form-about">
+    <h3>Giving You A Voice</h3>
+    <p>Donec a condimentum nisl. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec in consequat leo, non dictum metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vitae pulvinar elit. Nulla facilisi. Phasellus ut lacinia purus. Donec congue euismod volutpat. Morbi in elementum urna. Aenean quis mauris at ante porttitor consectetur sed a odio. Donec laoreet neque lorem, ac posuere est vehicula non. Vivamus blandit dolor id nibh porta fringilla. Nam hendrerit rutrum nunc, at tristique massa dignissim vitae. Ut nec eros in nibh vehicula posuere ac ac neque. Integer dictum, risus id accumsan lobortis, ante ligula tristique ipsum, vitae lacinia mauris augue nec orci.</p>
+  </div>
+
+  <h3 ng-hide="RobotNewViewModel.formIsVisible">What corporation are you with?</h3>
+  <form ng-hide="RobotNewViewModel.formIsVisible" data-ng-submit="RobotNewViewModel.toggleForm()">
+    <input placeholder="Name of Corporation" data-ng-model="RobotNewViewModel.robot.corporation" />
+    <button type="button" data-ng-click="RobotNewViewModel.toggleForm()">Add Your Robot</button>
+  </form>
+
+  <form ng-show="RobotNewViewModel.formIsVisible" id="new-form">
+    <h3>{{RobotNewViewModel.robot.corporation}}</h3><p>Tell us about your robot:</p>
+    <br />
+    <label>Name</label>
+    <input placeholder="Name" data-ng-model="RobotNewViewModel.robot.name">
+    <label>Tagline</label>
+    <input placeholder="Keep it short and catchy" data-ng-model="RobotNewViewModel.robot.tagline">
+    <label>Photo Url</label>
+    <input placeholder="http://www.url.com/" data-ng-model="RobotNewViewModel.robot.photoUrl">
+    <label>Bio</label>
+    <textarea placeholder="Briefly talk about the robot. What does it offer that other robots don't?" data-ng-model="RobotNewViewModel.robot.bio"></textarea>
+    <label>Country</label>
+    <input placeholder="Country" data-ng-model="RobotNewViewModel.robot.country">
+    <label>Class <span><em>(AAA, AA, A, B, C, X, Z)</em></span></label>
+    <input placeholder="Class" data-ng-model="RobotNewViewModel.robot.rClass">
+    <label>Corporation</label>
+    <input placeholder="Corporation" data-ng-model="RobotNewViewModel.robot.corporation">
+    <label>Year Built</label>
+    <input placeholder="Year Built" data-ng-model="RobotNewViewModel.robot.year">
+    <label>WRA Rating <span></span></label>
+    <div id="wra-rating">
+      <input placeholder="Power (1-10)" data-ng-model="RobotNewViewModel.robot.statistics.power">
+      <input placeholder="Energy (1-10)" data-ng-model="RobotNewViewModel.robot.statistics.energy">
+      <input placeholder="Agility (1-10)" data-ng-model="RobotNewViewModel.robot.statistics.agility">
+      <input placeholder="Armor (1-10)" data-ng-model="RobotNewViewModel.robot.statistics.armor">
+    </div>
+    <div id="form-pilot">
+      <div>
+        <p>Left Brain Pilot</p>
+        <label>Name</label>
+        <input placeholder="Name" data-ng-model="RobotNewViewModel.robot.pilots.left.name">
+        <label>Nationality</label>
+        <input placeholder="Nationality" data-ng-model="RobotNewViewModel.robot.pilots.left.nationality">
+        <label>Battles Won</label>
+        <input placeholder="Battles Won" data-ng-model="RobotNewViewModel.robot.pilots.left.battles">
+      </div>
+      <div>
+        <p>Right Brain Pilot</p>
+        <label>Name</label>
+        <input placeholder="Name" data-ng-model="RobotNewViewModel.robot.pilots.right.name">
+        <label>Nationality</label>
+        <input placeholder="Nationality" data-ng-model="RobotNewViewModel.robot.pilots.right.nationality">
+        <label>Battles Won</label>
+        <input placeholder="Battles Won" data-ng-model="RobotNewViewModel.robot.pilots.right.battles">
+      </div>
+    </div>
+
+    <button type="button" data-ng-click='RobotNewViewModel.create()'>Add {{RobotNewViewModel.robot.name}} to Warehouse</button>
+  </form>
+</div>

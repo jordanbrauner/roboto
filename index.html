@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US" data-ng-app="roboto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roboto</title>
+
+  <!-- Require scripts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/core-styles.css">
+  <link rel="stylesheet" type="text/css" href="css/nav-styles.css">
+  <link rel="stylesheet" type="text/css" href="css/index-styles.css">
+  <link rel="stylesheet" type="text/css" href="css/show-styles.css">
+  <link rel="stylesheet" type="text/css" href="css/form-styles.css">
+  <link rel="stylesheet" type="text/css" href="css/footer-styles.css">
+  <link rel="stylesheet" type="text/css" href="css/contributions-styles.css">
+  <link rel="stylesheet" type="text/css" href="css/more-styles.css">
+  <link rel="stylesheet" type="text/css" href="css/roboto/roboto-about-styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,300italic,400italic,800italic,700italic|Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <!-- Body White section that gives a white background color to separate it from the HTML's body background -->
+  <section id="white-bg">
+
+    <!-- Container for Nav Bar -->
+      <nav id="nav-wrapper">
+        <div id="white-nav">
+
+        <!-- Notice and Account -->
+        <div id="notice-bar">
+            <div id="notice-container" data-ng-controller="RobotIndexController as RobotIndexViewModel">
+              <div data-ng-repeat="robot in RobotIndexViewModel.robots | limitTo:1">
+                <p>Latest arrival: <a data-ui-sref="robotShow(robot)"><strong>{{robot.name}}</strong></a></p>
+              </div>
+            </div>
+            <div id="account-container">
+              <div id="notice-arrow-container">
+                <img src="/img/design-elements/box-arrow-notice.png" />
+              </div>
+              <p>New to Roboto? <strong><a data-ui-sref="robotIndex">Sign up</a></strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Logo and nav links -->
+        <div id="nav-bar">
+          <div id="logo-container">
+            <a data-ui-sref="robotIndex"><img src="img/roboto/roboto-logo-f.png" /></a>
+          </div>
+          <div id="nav-options-container">
+            <p><a data-ui-sref="robotoAbout">ABOUT</a></p>
+            <div class="nav-rule"></div>
+            <p><a data-ui-sref="robotIndex">WAREHOUSE</a></p>
+            <div class="nav-rule"></div>
+            <p>RANKINGS</p>
+            <div class="nav-rule"></div>
+            <p><a data-ui-sref="robotNew">NEW</a></p>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-bar-push"></div>
+
+    <!-- Angular Main -->
+    <main data-ui-view></main>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div id="footer-rule"></div>
+    <div class="row" id="footer-container">
+
+      <!-- Left side of footer containing logo and copyright -->
+      <div class="col-md-5 col-xs-5" id="footer-left">
+        <a data-ui-sref="robotIndex"><img src="/img/roboto/roboto-logo-footer.png"></a>
+        <p>&copy; Copyright 2028-72</p>
+      </div>
+
+      <!-- Right side of footer container containing nav links -->
+      <div class="col-md-7 col-xs-7" id="footer-right">
+        <p><a data-ui-sref="robotIndex">WAREHOUSE</a></p>
+        <div class="footer-rule"></div>
+        <p><a data-ui-sref="robotNew">NEW</a></p>
+        <div class="footer-rule"></div>
+        <p>HISTORY</p>
+        <div class="footer-rule"></div>
+        <p>CONTACT</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Require CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.17/angular-ui-router.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <!-- Require Files -->
+  <script src="./js/app.js"></script>
+  <script src="./js/robots/robots.js"></script>
+  <script src="./js/robots/corporations.js"></script>
+  <script src="./js/robots/index.controller.js"></script>
+  <script src="./js/robots/show.controller.js"></script>
+  <script src="./js/robots/new.controller.js"></script>
+  <script src="./js/robots/edit.controller.js"></script>
+  <script src="./js/robots/robot.factory.js"></script>
+  <script src="./js/robots/corporation.factory.js"></script>
+</body>
+</html>
