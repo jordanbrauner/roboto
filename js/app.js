@@ -1,3 +1,4 @@
+
 (function() {
   "use strict";
 
@@ -53,6 +54,7 @@
         controller: "RobotoAboutController",
         controllerAs: "RobotoAboutViewModel"
       });
+
   }
 
 })();
