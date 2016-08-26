@@ -15,26 +15,28 @@
     // Scroll to top of page on state change
     $("html, body").animate({ scrollTop: 0 }, 200);
 
-    console.log("new.controller.js: ControllerFunction called to create new RobotFactory");
-    this.robot = new RobotFactory();
-    this.create = function() {
-      console.log("new.controller.js: Create function called.");
-      this.robot.$save(function(response) {
-        for (var i in response) {
-          console.log("new.controller.js: This is the response to $save: " + response[i]);
+    var vm = this;
+
+    vm.robot = new RobotFactory();
+
+    vm.create = function() {
+      console.log("Create function called. Robot is: " + this.robot);
+      this.robot.$save(function(res) {
+        for (var i in res) {
+          console.log("This is the response to $save: " + res[i]);
         }
         $state.go("robotIndex", {}, {reload: true});
       });
     };
 
-    this.formIsVisible = false;
-    this.toggleForm = function() {
+    vm.formIsVisible = false;
+    vm.toggleForm = function() {
       console.log("toggleForm called");
-      if (this.formIsVisible) {
-        this.formIsVisible = false;
+      if (vm.formIsVisible) {
+        vm.formIsVisible = false;
       }
       else {
-        this.formIsVisible = true;
+        vm.formIsVisible = true;
       }
     };
 

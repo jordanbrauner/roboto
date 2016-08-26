@@ -5,11 +5,12 @@
     .module("robots")
     .controller("RobotShowController", [
       "RobotFactory",
+      '$resource',
       "$stateParams",
       ControllerFunction
     ]);
 
-  function ControllerFunction(RobotFactory, $stateParams) {
+  function ControllerFunction(RobotFactory, $resource, $stateParams) {
 
     // Scroll to top of page on state change
     $("html, body").animate({ scrollTop: 0 }, 200);

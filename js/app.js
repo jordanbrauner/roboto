@@ -5,14 +5,16 @@
   angular
     .module("roboto", [
       "ui.router",
-      "robots"
+      "robots",
+      // "contributions"
     ])
     .config([
       "$stateProvider",
+      "$urlRouterProvider",
       RouterFunction
     ]);
 
-  function RouterFunction($stateProvider, $rootScope) {
+  function RouterFunction($stateProvider, $urlRouterProvider, $rootScope) {
 
     $stateProvider
       // Welcome route
@@ -54,6 +56,8 @@
         controller: "RobotoAboutController",
         controllerAs: "RobotoAboutViewModel"
       });
+
+      $urlRouterProvider.otherwise("/robots");
 
   }
 

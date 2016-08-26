@@ -1,9 +1,9 @@
-// (function() {
-//   "use strict";
-//
-//   angular
-//     .module("corporations", [
-//       "ngResource"
-//     ]);
-//
-// })();
+(function() {
+  "use strict";
+
+  angular
+    .module("corporations", [
+      "ngResource"
+    ]);
+
+})();

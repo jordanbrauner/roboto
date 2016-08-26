@@ -4,7 +4,7 @@
 <!-- Name and tagline container -->
 <div id="robot-splash-container">
   <div id="robot-splash-text">
-    <h3 id="robot-name">{{RobotShowViewModel.robot.name}}</h3>
+    <a data-ui-sref="robotEdit({id: RobotShowViewModel.robot.id })"><h3 id="robot-name">{{RobotShowViewModel.robot.name}}</h3></a>
     <h4 id="robot-tagline">{{RobotShowViewModel.robot.tagline}}</h4>
   </div>
   <div id="splash-container-arrow">
@@ -36,7 +36,7 @@
     </div>
 
     <!-- Right content container (Statistics, History, Pilots) -->
-    <div id="right-content-container">
+    <div id="robot-right-container">
 
       <!-- Decorative section title -->
       <div id="statistics-title">
@@ -96,7 +96,6 @@
       </div>
       <!-- END: History and Pilots container  -->
 
-
     </div>
     <!-- END: Right content container and its container -->
 
@@ -104,8 +103,8 @@
   <!-- END: Show container -->
 </div>
 
-  <!-- Contributions Container -->
-  <div id="contributions-container" data-ng-include="'./js/robots/partials/contributions.html'"></div>
+<!-- Contributions Container -->
+<div id="contributions-container" data-ng-include="'./js/robots/partials/contributions.html'"></div>
 
-  <!-- More Container -->
-  <div id="more-container" data-ng-include="'./js/robots/partials/more.html'"></div>
+<!-- More Container -->
+<div id="more-container" data-ng-include="'./js/robots/partials/more.html'"></div>

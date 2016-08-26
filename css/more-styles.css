@@ -70,9 +70,10 @@
 }
 
 .robot {
-  margin: .85em .85em 2.25em .85em;
-  height: 20em;
-  width: 18em;
+  margin: 0 1.5em 1.5em 0;
+  padding-bottom: 10px;
+  width: 20em;
+  height: auto;
   transition: color 0.25s ease;
 }
 

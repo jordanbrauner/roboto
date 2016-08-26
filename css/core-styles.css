@@ -14,22 +14,13 @@ html, body {
 }*/
 
 body {
-  min-width: 950px;
+  min-width: 950px;*/
+  min-height: 50em;
 }
 
 button {
   margin: 0;
   padding: 0;
-}
-
-#white-bg, footer {
-  margin: 0 auto;
-}
-
-#white-bg {
-  background-color: white;
-  min-height: 50em;
-  min-width: 950px;
 }
 
 #show-width-limit, #index-width-limit {

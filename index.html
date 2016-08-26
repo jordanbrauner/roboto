@@ -4,16 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Roboto</title>
-
-  <!-- Require CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>   <!-- jQuery -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> <!-- Twitter Bootstrap -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,300italic,400italic,800italic,700italic|Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'> <!-- Twitter Bootstrap - CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> <!-- Angular -->
+  <!-- Angular Plug-Ins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-  <!-- Require scripts -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Scripts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/core-styles.css">
   <link rel="stylesheet" type="text/css" href="css/nav-styles.css">
   <link rel="stylesheet" type="text/css" href="css/index-styles.css">
@@ -22,13 +21,12 @@
   <link rel="stylesheet" type="text/css" href="css/footer-styles.css">
   <link rel="stylesheet" type="text/css" href="css/contributions-styles.css">
   <link rel="stylesheet" type="text/css" href="css/more-styles.css">
+  <link rel="stylesheet" type="text/css" href="css/media-queries.css">
   <link rel="stylesheet" type="text/css" href="css/roboto/roboto-about-styles.css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,300italic,400italic,800italic,700italic|Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-  <!-- Body White section that gives a white background color to separate it from the HTML's body background -->
-  <section id="white-bg">
+  <section>
 
     <!-- Container for Nav Bar -->
       <nav id="nav-wrapper">
@@ -82,7 +80,7 @@
       <!-- Left side of footer containing logo and copyright -->
       <div class="col-md-5 col-xs-5" id="footer-left">
         <a data-ui-sref="robotIndex"><img src="/img/roboto/roboto-logo-footer.png"></a>
-        <p>&copy; Copyright 2028-72</p>
+        <p>&copy; Copyright 20X4-RA-7S</p>
       </div>
 
       <!-- Right side of footer container containing nav links -->
@@ -101,13 +99,15 @@
   <!-- Require Files -->
   <script src="./js/app.js"></script>
   <script src="./js/robots/robots.js"></script>
+  <script src="./js/robots/contributions.js"></script>
   <script src="./js/robots/corporations.js"></script>
   <script src="./js/robots/index.controller.js"></script>
   <script src="./js/robots/show.controller.js"></script>
   <script src="./js/robots/new.controller.js"></script>
   <script src="./js/robots/edit.controller.js"></script>
-  <script src="./js/robots/robot.factory.js"></script>
-  <script src="./js/robots/corporation.factory.js"></script>
   <script src="./js/roboto/about.controller.js"></script>
+  <script src="./js/robots/robot.factory.js"></script>
+  <script src="./js/robots/contribution.factory.js"></script>
+  <script src="./js/robots/corporation.factory.js"></script>
 </body>
 </html>

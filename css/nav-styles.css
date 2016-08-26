@@ -74,11 +74,13 @@ Navbar
   display: flex;
   justify-content: flex-start;
   height: 4.5em;
+  padding-top: .2em;
   background-color: white;
 }
 
 #logo-container {
   width: 100%;
+  padding-top: .2em;
   margin-left: 3.5em;
 }
 

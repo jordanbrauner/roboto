@@ -24,7 +24,7 @@
     <div id="top-contributions">
       <p class="contributions-subtitle">// TOP CONTRIBUTIONS</p>
       <ul>
-        <div data-ng-repeat="contributor in RobotShowViewModel.robot.contributions.contribute" class="contributors">
+        <div data-ng-repeat="contributor in RobotShowViewModel.robot.contributions" class="contributors">
           <li>
             <p>{{contributor.name}}</p>
             <p><span>${{contributor.amount}}</span></p>
@@ -37,7 +37,7 @@
     <div id="recent-contributions">
       <p class="contributions-subtitle">// RECENT CONTRIBUTIONS</p>
       <ul>
-        <div data-ng-repeat="contributor in RobotShowViewModel.robot.contributions.contribute" class="contributors">
+        <div data-ng-repeat="contributor in RobotShowViewModel.robot.contributions" class="contributors">
           <li>
             <p>{{contributor.name}}</p>
             <p><span>${{contributor.amount}}</span></p>

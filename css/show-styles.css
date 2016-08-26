@@ -111,7 +111,7 @@ LEFT CONTAINER
 *************************/
 
 #robot-left-container {
-  width: 65%;
+  width: 60%;
   padding-left: 6em;
   padding-right: 4em;
   margin-top: 3em;
@@ -143,10 +143,10 @@ LEFT CONTAINER
 RIGHT CONTAINER
 *************************/
 
-#right-content-container {
-  width: 35%;
+#robot-right-container {
+  width: 40%;
   margin-top: 1em;
-  padding: 0 3em 0 3em;
+  padding: 0 6em 0 3em;
   border-left: .1em solid lightgray;
 }
 
@@ -187,6 +187,10 @@ RIGHT CONTAINER
   margin-bottom: 5em;
 }
 
+#statistics-title .title-box {
+  cursor: default;
+}
+
 .statistics-circle {
   min-width: 4.5em;
   max-width: 4.5em;
@@ -196,6 +200,10 @@ RIGHT CONTAINER
   border-radius: 360px;
   text-align: center;
   transition: border 0.25s ease;
+}
+
+.statistics-circle:hover {
+  cursor: default;
 }
 
 .statistics-circle h4 {
