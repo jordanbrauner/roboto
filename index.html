@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" data-ng-app="roboto">
+<html lang="en-us" data-ng-app="roboto">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +35,7 @@
         <!-- Notice and Account -->
         <div id="notice-bar">
             <div id="notice-container" data-ng-controller="RobotIndexController as RobotIndexViewModel">
-              <div data-ng-repeat="robot in RobotIndexViewModel.robots | limitTo:1">
+              <div data-ng-repeat="robot in RobotIndexViewModel.robots | limitTo:-1">
                 <p>Latest arrival: <a data-ui-sref="robotShow(robot)"><strong>{{robot.name}}</strong></a></p>
               </div>
             </div>

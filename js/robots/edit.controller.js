@@ -27,7 +27,7 @@
 
     // Delete function
     vm.delete = function() {
-      this.robot.$delete(function(response) {
+      this.robot.$delete({ id: $stateParams.id }).then(function() {
         $state.go("robotIndex", {}, { reload: true });
       });
     };

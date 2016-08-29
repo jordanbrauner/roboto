@@ -13,7 +13,7 @@
 
   <div id="more-middle">
     <div data-ng-repeat="robot in RobotShowViewModel.robots | limitTo:3">
-      <div class="robot">
+      <div class="robot more">
         <a data-ui-sref="robotShow({id: robot.id})">
           <div class="robot-image" data-ng-style="{'background-image': 'url(' + robot.photoUrl + ')'}"></div>
           <h3>{{robot.name}}</h3>
