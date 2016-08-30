@@ -7,49 +7,8 @@
   <form>
     <button type="button" data-ng-click='RobotEditViewModel.update()'>Update {{RobotEditViewModel.robot.name}}'s information</button><br /><br />
 
-    <label>Name</label>
-    <input placeholder="Name" data-ng-model="RobotEditViewModel.robot.name">
-    <label>Tagline</label>
-    <input placeholder="Tagline" data-ng-model="RobotEditViewModel.robot.tagline">
-    <label>Photo Url</label>
-    <input placeholder="http://www.url.com/" data-ng-model="RobotEditViewModel.robot.photoUrl">
-    <label>Bio</label>
-    <textarea placeholder="Bio" data-ng-model="RobotEditViewModel.robot.bio"></textarea>
-    <label>Country</label>
-    <input placeholder="Country" data-ng-model="RobotEditViewModel.robot.country">
-    <label>Class <span><em>(AAA, AA, A, B, C, X, Z)</em></span></label>
-    <input placeholder="Class" data-ng-model="RobotEditViewModel.robot.rClass">
-    <label>Corporation</label>
-    <input placeholder="Corporation" data-ng-model="RobotEditViewModel.robot.corporation">
-    <label>Year Built</label>
-    <input placeholder="Year Built" data-ng-model="RobotEditViewModel.robot.year">
-    <label>WRA Rating <span><em>(1 – 10)</em></span></label>
-    <div id="wra-rating">
-      <input placeholder="Power (1-10)" data-ng-model="RobotNewViewModel.robot.sPower">
-      <input placeholder="Energy (1-10)" data-ng-model="RobotNewViewModel.robot.sEnergy">
-      <input placeholder="Agility (1-10)" data-ng-model="RobotNewViewModel.robot.sAgility">
-      <input placeholder="Armor (1-10)" data-ng-model="RobotNewViewModel.robot.sArmor">
-    </div>
-    <div id="form-pilot">
-      <div>
-        <p>Left Brain Pilot</p>
-        <label>Name</label>
-        <input placeholder="Name" data-ng-model="RobotNewViewModel.robot.pLName">
-        <label>Nationality</label>
-        <input placeholder="Nationality" data-ng-model="RobotNewViewModel.robot.pLNationality">
-        <label>Battles Won</label>
-        <input placeholder="Battles Won" data-ng-model="RobotNewViewModel.robot.pLBattles">
-      </div>
-      <div>
-        <p>Right Brain Pilot</p>
-        <label>Name</label>
-        <input placeholder="Name" data-ng-model="RobotNewViewModel.robot.pRName">
-        <label>Nationality</label>
-        <input placeholder="Nationality" data-ng-model="RobotNewViewModel.robot.pRNationality">
-        <label>Battles Won</label>
-        <input placeholder="Battles Won" data-ng-model="RobotNewViewModel.robot.pRBattles">
-      </div>
-    </div>
+    <!-- PARTIAL: Form -->
+    <div data-ng-include="'/js/robots/partials/_robot-edit-form.html'"></div>
 
     <button type="button" data-ng-click='RobotEditViewModel.update()'>Update {{RobotEditViewModel.robot.name}}'s information</button>
     <button type="button" data-ng-click='RobotEditViewModel.delete({ id: RobotEditViewModel.robot.id })'>Remove {{RobotEditViewModel.robot.name}} from Warehouse</button>
