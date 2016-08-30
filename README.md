@@ -4,7 +4,7 @@
 A faux crowdfunding app from the future. Contribute to your giant robot of choice being built by shady corporations.
 
 ##Current state##
-Roboto is currently early on. Basic features beyond CRUD for robots are currently being worked on.
+Roboto is currently early in development. Basic features beyond CRUD for robots are currently being worked on.
 
 **Developer Roadmap**
 
