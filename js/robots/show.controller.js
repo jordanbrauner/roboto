@@ -25,7 +25,7 @@
 
     vm.contributions = ContributionFactory.query({ id: $stateParams.id }, function(res) {
       vm.contributions.forEach(function(contribution) {
-        contribution.amount = parseFloat(contribution.amount);
+        contribution.amount = parseFloat(contribution.amount).toFixed(2);
       });
     });
 
