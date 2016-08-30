@@ -16,7 +16,7 @@
     <div id="about-corporation">
       <p class="contributions-subtitle">// ABOUT</p>
       <div>
-        <strong>{{RobotShowViewModel.robot.corporation}}</strong> is an andempo recessum delistis natiate quis et asperciis dolum voluptam verum rem ra niti a quam nonetur moluptas simus et odi cum aciur, eic to officie ntisque reic to eum dolorum quisque nonsed et autem. Et rerum incim estoresti us eatem dolorem lautataquid quid quia et rem hicte vel id quodignam eos eicaborendam ius eos voluptati alis quo modis ide ommo ipsaped itatur solum, occum fugitis sam fugiant ad ut que voluptam quatem nobis am, quae n
+        <p><strong>{{RobotShowViewModel.robot.corporation}}</strong> is an andempo recessum delistis natiate quis et asperciis dolum voluptam verum rem ra niti a quam nonetur moluptas simus et odi cum aciur, eic to officie ntisque reic to eum dolorum quisque nonsed et autem. Et rerum incim estoresti us eatem dolorem lautataquid quid quia et rem hicte vel id quodignam eos eicaborendam ius eos voluptati alis quo modis ide ommo ipsaped itatur solum, occum fugitis sam fugiant ad ut que voluptam quatem nobis am, quae n</p>
       </div>
     </div>
 
@@ -24,7 +24,7 @@
     <div id="top-contributions">
       <p class="contributions-subtitle">// TOP CONTRIBUTIONS</p>
       <ul>
-        <div data-ng-repeat="contributor in RobotShowViewModel.robot.contributions" class="contributors">
+        <div data-ng-repeat="contributor in RobotShowViewModel.contributions | orderBy: 'amount'" class="contributors">
           <li>
             <p>{{contributor.name}}</p>
             <p><span>${{contributor.amount}}</span></p>
@@ -37,7 +37,7 @@
     <div id="recent-contributions">
       <p class="contributions-subtitle">// RECENT CONTRIBUTIONS</p>
       <ul>
-        <div data-ng-repeat="contributor in RobotShowViewModel.robot.contributions" class="contributors">
+        <div data-ng-repeat="contributor in RobotShowViewModel.contributions | orderBy: 'created_at'" class="contributors">
           <li>
             <p>{{contributor.name}}</p>
             <p><span>${{contributor.amount}}</span></p>
@@ -48,27 +48,27 @@
   </section>
 
   <!-- Bottom section of Contributions: Call to action buttons -->
-  <section id="contributions-bottom">
+  <!-- <section id="contributions-bottom">
 
     <div id="make-a-difference-title">
       <div class="make-a-difference-title-rule"></div>
       <h4>Make A Difference</h4>
       <div class="make-a-difference-title-rule"></div>
-    </div>
+    </div> -->
 
     <!-- Buttons Container -->
-    <div id="contribute-button-container">
+    <!-- <div id="contribute-button-container"> -->
 
       <!-- Promise button -->
-      <div id="promise-button">
+      <!-- <div id="promise-button">
         <button>Promise</button>
-        <!-- <p>Make a promise to pledge as soon as you’re able.</p> -->
-      </div>
+        <p>Make a promise to pledge as soon as you’re able.</p>
+      </div> -->
 
       <!-- Contribute button -->
-      <div id="contribute-button">
+      <!-- <div id="contribute-button">
         <button data-ng-click="contributing = !contributing">Contribute</button>
-        <!-- <p>Do you part and contribute to <strong>{{RobotShowViewModel.robot.corporation}}</strong>.</p> -->
+        <p>Do you part and contribute to <strong>{{RobotShowViewModel.robot.corporation}}</strong>.</p>
       </div>
 
       <div id="social-button-container">
@@ -83,12 +83,12 @@
             <img src="img/social-media/sm-tw-w.png" />
           </div>
         </div>
-        <!-- <p>Tell your colleagues about the work <strong>{{RobotShowViewModel.robot.corporation}}</strong> is doing to protect our planet.</p> -->
+        <p>Tell your colleagues about the work <strong>{{RobotShowViewModel.robot.corporation}}</strong> is doing to protect our planet.</p>
       </div>
     </div>
 
 
-    <div id="contribution-form-container" data-ng-include="'./js/robots/partials/contributions-form.html'" data-ng-show="contributing" data-ng-hide="!contributing"></div>
-  </section>
+    <div id="contribution-form-container" data-ng-include="'./js/robots/contributions/_contributions-form.html'" data-ng-show="contributing" data-ng-hide="!contributing"></div>
+  </section> -->
 
 </div>

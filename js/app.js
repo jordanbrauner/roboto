@@ -6,7 +6,7 @@
     .module("roboto", [
       "ui.router",
       "robots",
-      // "contributions"
+      "contributions"
     ])
     .config([
       "$stateProvider",

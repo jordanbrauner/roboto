@@ -2,7 +2,7 @@
   "use strict";
 
   angular
-    .module("corporations", [
+    .module("contributions", [
       "ngResource"
     ]);
 
