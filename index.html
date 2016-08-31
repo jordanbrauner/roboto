@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" data-ng-app="roboto">
+<html lang="en-us">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" type="text/css" href="/styles/css/robots/more-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/media-queries.css">
 </head>
-<body>
+<body data-ng-app="roboto">
 
   <section>
 
@@ -71,25 +71,23 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div id="footer-rule"></div>
-    <div class="row" id="footer-container">
+  <footer class="footer">
+    <div class="footer__rule--horizontal"></div>
+    <div class="footer__row">
 
       <!-- Left side of footer containing logo and copyright -->
-      <div class="col-md-5 col-xs-5" id="footer-left">
-        <a class="link" data-ui-sref="robotIndex"><img src="/img/roboto/roboto-logo-footer.png"></a>
-        <p>&copy; Copyright 20X4-RA-7S</p>
+      <div class="footer__left-col">
+        <a class="link--footer" data-ui-sref="robotIndex"><img class="footer__logo" src="/img/roboto/roboto-logo-footer.png"></a>
+        <p class="footer__copyright">&copy; Copyright 20X4-RA-7S</p>
       </div>
 
       <!-- Right side of footer container containing nav links -->
-      <div class="col-md-7 col-xs-7" id="footer-right">
-        <p><a data-ui-sref="robotIndex">WAREHOUSE</a></p>
-        <div class="footer-rule"></div>
-        <p><a data-ui-sref="robotNew">NEW</a></p>
-        <div class="footer-rule"></div>
-        <p>HISTORY</p>
-        <div class="footer-rule"></div>
-        <p>CONTACT</p>
+      <div class="footer__right-col">
+        <a class="link link--footer" data-ui-sref="robotIndex">WAREHOUSE</a>
+        <div class="footer__rule--vertical"></div>
+        <a class="link link--footer" data-ui-sref="robotoAbout">ABOUT</a>
+        <div class="footer__rule--vertical"></div>
+        <a class="link link--footer" data-ui-sref="robotNew">CAMPAIGN</a>
       </div>
     </div>
   </footer>

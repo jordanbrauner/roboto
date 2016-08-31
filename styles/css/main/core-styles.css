@@ -52,7 +52,8 @@ Main Fonts
 
 .link:hover {
   color: red;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 .robot-subtitle-1, .robot-subtitle-2 {
   font-size: .9em;
