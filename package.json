@@ -12,5 +12,11 @@
     "angular": "^1.5.0",
     "body-parser": "^1.14.2",
     "method-override": "^2.3.5"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-htmlmin": "^2.0.0",
+    "grunt-contrib-uglify": "^2.0.0"
   }
 }

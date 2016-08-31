@@ -13,54 +13,52 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
   <!-- Scripts -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/core-styles.css">
-  <link rel="stylesheet" type="text/css" href="css/nav-styles.css">
-  <link rel="stylesheet" type="text/css" href="css/index-styles.css">
-  <link rel="stylesheet" type="text/css" href="css/show-styles.css">
-  <link rel="stylesheet" type="text/css" href="css/form-styles.css">
-  <link rel="stylesheet" type="text/css" href="css/footer-styles.css">
-  <link rel="stylesheet" type="text/css" href="css/contributions-styles.css">
-  <link rel="stylesheet" type="text/css" href="css/more-styles.css">
-  <link rel="stylesheet" type="text/css" href="css/media-queries.css">
-  <link rel="stylesheet" type="text/css" href="css/roboto/roboto-about-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/main/import-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/main/core-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/main/nav-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/robots/index-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/robots/show-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/robots/form-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/main/footer-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/robots/contributions-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/robots/more-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/main/media-queries.css">
 </head>
 <body>
 
   <section>
 
     <!-- Container for Nav Bar -->
-      <nav id="nav-wrapper">
-        <div id="white-nav">
+      <nav class="nav">
+        <div class="nav__background">
 
         <!-- Notice and Account -->
-        <div id="notice-bar">
-            <div id="notice-container" data-ng-controller="RobotIndexController as RobotIndexViewModel">
+        <div class="notice-bar">
+            <div class="notice-bar__latest" data-ng-controller="RobotIndexController as RobotIndexViewModel">
               <div data-ng-repeat="robot in RobotIndexViewModel.robots | limitTo:-1">
-                <p>Latest arrival: <a data-ui-sref="robotShow(robot)"><strong>{{robot.name}}</strong></a></p>
+                <p class="notice-bar__p notice-bar__p--dark">Latest arrival:&nbsp;<a class="link notice-bar__link--dark" data-ui-sref="robotShow(robot)"><strong>{{robot.name}}</strong></a></p>
               </div>
             </div>
-            <div id="account-container">
-              <div id="notice-arrow-container">
+            <div class="notice-bar__account">
+              <div class="notice-bar__arrow">
                 <img src="/img/design-elements/box-arrow-notice.png" />
               </div>
-              <p>New to Roboto? <strong><a data-ui-sref="robotIndex">Sign up</a></strong></p>
+              <p class="notice-bar__p notice-bar__p--light">New to Roboto?&nbsp;<a class="notice-bar__link-light" data-ui-sref="robotIndex"><strong>Sign up</strong></a></p>
             </div>
           </div>
         </div>
 
         <!-- Logo and nav links -->
-        <div id="nav-bar">
-          <div id="logo-container">
-            <a data-ui-sref="robotIndex"><img src="img/roboto/roboto-logo-f.png" /></a>
+        <div class="main-nav">
+          <div class="logo-container">
+            <a class="link" data-ui-sref="robotIndex"><img class="logo-container__img" src="img/roboto/roboto-logo-f.png" /></a>
           </div>
-          <div id="nav-options-container">
-            <p><a data-ui-sref="robotoAbout">ABOUT</a></p>
-            <div class="nav-rule"></div>
-            <p><a data-ui-sref="robotIndex">WAREHOUSE</a></p>
-            <div class="nav-rule"></div>
-            <p>RANKINGS</p>
-            <div class="nav-rule"></div>
-            <p><a data-ui-sref="robotNew">NEW</a></p>
+          <div class="nav-options-container">
+            <p class="nav-options-container__p"><a class="link" data-ui-sref="robotIndex">WAREHOUSE</a></p>
+            <div class="main-nav__rule"></div>
+            <p class="nav-options-container__p"><a class="link" data-ui-sref="robotoAbout">ABOUT</a></p>
+            <div class="main-nav__rule"></div>
+            <p class="nav-options-container__p"><a class="link" data-ui-sref="robotNew">CAMPAIGN</a></p>
           </div>
         </div>
       </div>
@@ -79,7 +77,7 @@
 
       <!-- Left side of footer containing logo and copyright -->
       <div class="col-md-5 col-xs-5" id="footer-left">
-        <a data-ui-sref="robotIndex"><img src="/img/roboto/roboto-logo-footer.png"></a>
+        <a class="link" data-ui-sref="robotIndex"><img src="/img/roboto/roboto-logo-footer.png"></a>
         <p>&copy; Copyright 20X4-RA-7S</p>
       </div>
 
@@ -97,16 +95,16 @@
   </footer>
 
   <!-- Require Files -->
-  <script src="./js/app.js"></script>
-  <script src="./js/robots/robots.js"></script>
-  <script src="./js/robots/robot.factory.js"></script>
-  <script src="./js/robots/index.controller.js"></script>
-  <script src="./js/robots/show.controller.js"></script>
-  <script src="./js/robots/new.controller.js"></script>
-  <script src="./js/robots/edit.controller.js"></script>
-  <script src="./js/core/about.controller.js"></script>
-  <script src="./js/robots/contributions/contributions.js"></script>
-  <script src="./js/robots/contributions/contribution.factory.js"></script>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/robots/robots.js"></script>
+  <script src="/scripts/robots/robot.factory.js"></script>
+  <script src="/scripts/robots/index.controller.js"></script>
+  <script src="/scripts/robots/show.controller.js"></script>
+  <script src="/scripts/robots/new.controller.js"></script>
+  <script src="/scripts/robots/edit.controller.js"></script>
+  <script src="/scripts/core/about.controller.js"></script>
+  <script src="/scripts/robots/contributions/contributions.js"></script>
+  <script src="/scripts/robots/contributions/contribution.factory.js"></script>
 
 </body>
 </html>

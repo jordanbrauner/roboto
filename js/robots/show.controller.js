@@ -16,8 +16,8 @@
     // Scroll to top of page on state change
     $("html, body").animate({ scrollTop: 0 }, 200);
 
-    var vm = this;
-    var contributing = false;
+    var vm = this,
+        contributing = false;
 
     vm.robots = RobotFactory.query();
 
@@ -28,10 +28,6 @@
         contribution.amount = parseFloat(contribution.amount).toFixed(2);
       });
     });
-
-    console.log(vm.robots);
-    console.log(vm.robot);
-    console.log(vm.contributions);
 
   }
 

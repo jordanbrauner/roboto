@@ -1,0 +1,77 @@
+@import "import-styles.scss";
+
+#footer-container {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+footer {
+  margin: 0 auto;
+  background-color: #2E2E2E;
+  color: #808080;
+  padding-bottom: 3em;
+}
+
+footer a, footer a:visited, footer a:active, footer a:hover {
+  color: #808080;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+#footer-container {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+#footer-rule {
+  padding-top: 4em;
+  border-bottom: 1px solid #808080;
+  margin-bottom: 5em;
+}
+
+footer .row div p {
+  margin-left: 1em;
+  padding-left: 1em;
+  font-size: .7em;
+  letter-spacing: .125em;
+  font-weight: 700;
+}
+
+#footer-left {
+  display: relative;
+  top: -1em;
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-strart;
+  align-items: flex-start;
+}
+
+#footer-left > p {
+  display: flex;
+  align-self: center;
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-top: 1.4em;
+}
+
+#footer-left img {
+  display: flex;
+  align-self: center;
+  width: 9em;
+  margin-top: .4em;
+}
+
+#footer-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.footer-rule {
+  margin-left: 1.2em;
+  height: 2.5em;
+  border-right: .1em solid #808080;
+}

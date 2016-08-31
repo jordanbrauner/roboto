@@ -1,0 +1,322 @@
+@import "../main/import-styles.scss";
+
+/*************************
+CORE STYLES
+*************************/
+
+.shadow {
+  box-shadow: inset 0 0 13em rgba(0, 0, 0, 0.2);
+}
+
+/* Content Container */
+#show-container {
+  margin-top: 2em;
+  padding-bottom: 5em;
+  display: flex;
+}
+
+/*************************
+MAIN ROBOT CONTAINER
+*************************/
+
+div#main-robot-container {
+
+}
+
+/* Main Image */
+#jumbo-image {
+  height: 40em;
+  width: 100%;
+  background-color: lightgray;
+  background-size: cover;
+}
+
+#main-robot-image {
+  width: 60%;
+  height: auto;
+}
+
+#jumbo-image-form {
+  height: 30em;
+  width: 100%;
+  background-color: lightgray;
+  background-size: cover;
+  background-image: url("/img/gallery/gundam-1.jpg");
+}
+
+/*************************
+SPLASH CONTAINER
+*************************/
+
+/* Splash Info */
+#robot-splash-container {
+  display: flex;
+  justify-content: flex-start;
+  height: 5.5em;
+}
+
+#robot-splash-text {
+  padding-left: 6em;
+  width: 65%;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+}
+
+#robot-splash-text h3 {
+  font-family: $primaryFontCondensed;
+  font-size: 2.8em;
+  font-weight: 600;
+  letter-spacing: .05em;
+  color: white;
+  margin-right: 1em;
+  margin-top: .25em;
+  text-transform: uppercase;
+}
+
+#robot-splash-text h4 {
+  font-weight: 400;
+  color: white;
+  margin-top: 1.5em;
+  text-transform: uppercase;
+  font-size: .75em;
+  font-weight: 200;
+  letter-spacing: .7em
+}
+
+#splash-container-arrow {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-self: flex-end;
+}
+
+#splash-container-arrow img {
+  width: 2.5em;
+}
+
+#edit-robot {
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  transition: background-color 0.25s ease;
+}
+
+#edit-robot:hover {
+  background-color: #c4c4c4;
+}
+
+#edit-robot:hover p a {
+  color: white;
+}
+
+#edit-robot p a {
+  text-align: center;
+  font-size: .8em;
+  text-transform: uppercase;
+  color: #c4c4c4;
+  transition: background-color 0.25s ease;
+}
+/*************************
+LEFT CONTAINER
+*************************/
+
+#robot-left-container {
+  width: 60%;
+  padding-left: 6em;
+  padding-right: 4em;
+  margin-top: 3em;
+}
+
+/* Bio and Gallery */
+#robot-bio {
+  font-size: .85em;
+  line-height: 2em;
+  margin-bottom: 5em;
+}
+
+#robot-gallery-container {
+  display: flex;
+}
+
+.placeholder-image {
+  height: 6em;
+  width: 6em;
+  background-color: #BBB;
+  margin-right: 1em;
+}
+
+.placeholder-image:hover {
+  opacity: 0.8;
+}
+
+/*************************
+RIGHT CONTAINER
+*************************/
+
+#robot-right-container {
+  width: 40%;
+  margin-top: 1em;
+  padding: 0 6em 0 3em;
+  border-left: .1em solid lightgray;
+}
+
+/* Statistics Title */
+#statistics-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title-rule {
+  width: 33%;
+  height: 1%;
+  border-top: 1px solid black;
+}
+
+.title-box {
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: .65em;
+  width: 9.5em;
+  height: 4.25em;
+  background-color: black;
+  color: white;
+  font-family: $primaryFontCondensed;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  border: 12px solid white;
+}
+
+/* Statistics */
+#statistics-info-container {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5em;
+}
+
+#statistics-title .title-box {
+  cursor: default;
+}
+
+.statistics-circle {
+  min-width: 4.5em;
+  max-width: 4.5em;
+  min-height: 4.5em;
+  max-height: 4.5em;
+  border: 1.5px solid black;
+  border-radius: 360px;
+  text-align: center;
+  transition: border 0.25s ease;
+}
+
+.statistics-circle:hover {
+  cursor: default;
+}
+
+.statistics-circle h4 {
+  padding-top: .105em;
+  padding-left: .725em;
+  display: flex;
+  align-self: center;
+  font-family: $primaryFontCondensed;
+  font-weight: 700;
+  font-size: 2.25em;
+  transition: color 0.25s ease;
+}
+
+.statistics-circle p {
+  padding-top: 1em;
+  font-family: $primaryFont;
+  font-weight: 700;
+  font-size: .75em;
+  color: #808080;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+/* Hover effects */
+#stat-power:hover {
+  border: 1.5px solid #f17022;
+}
+
+#stat-power:hover > h4, #stat-power:hover > p {
+  color: #f17022;
+}
+
+#stat-energy:hover {
+  border: 1.5px solid #fdb813;
+}
+
+#stat-energy:hover > h4, #stat-energy:hover > p {
+  color: #fdb813;
+}
+
+#stat-agility:hover {
+  border: 1.5px solid #f68b1f;
+}
+
+#stat-agility:hover > h4, #stat-agility:hover > p {
+  color: #f68b1f;
+}
+
+#stat-armor:hover {
+  border: 1.5px solid #62c2cc;
+}
+
+#stat-armor:hover > h4, #stat-armor:hover > p {
+  color: #62c2cc;
+}
+
+
+/* Bottom section (History, Pilots) */
+
+#statistics-bottom-container {
+  display: flex;
+}
+
+#statistics-bottom-container p {
+  font-size: .85em;
+}
+
+.robot-subtitle-1 {
+  border-bottom: 2px solid black;
+  padding-bottom: .7em;
+  margin-bottom: 1.5em;
+}
+
+.robot-subtitle-2 {
+  border-bottom: 1px solid black;
+  padding-bottom: .7em;
+  margin-bottom: 1.5em;
+}
+
+#history-container {
+  width: 45%;
+  margin-right: 10%;
+}
+
+#history-container p {
+  font-size: .85em;
+  margin-bottom: .3em;
+}
+
+#pilots-container {
+  width: 45%;
+}
+
+#pilots-container div {
+  margin-bottom: 1em;
+}
+
+#pilots-container div p {
+  margin-bottom: .3em;
+  font-size: .85em;
+}

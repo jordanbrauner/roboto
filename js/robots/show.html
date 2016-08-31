@@ -1,5 +1,19 @@
 <!-- Main Image -->
-<div id="jumbo-image" class="shadow" data-ng-style="{'background-image': 'url(' + RobotShowViewModel.robot.photoUrl + ')'}"></div>
+<div id="main-robot-container">
+  <div class="left-col">
+    <img id="main-robot-image" ng-src="{{RobotShowViewModel.robot.photoUrl}}"  />
+    <!-- <div id="main-robot-image" class="shadow" data-ng-style="{'background-image': 'url(' + RobotShowViewModel.robot.photoUrl + ')'}"></div> -->
+  </div>
+
+  <div class="right-col">
+    <p class="robot-subtitle-1">// CAMPAIGN STATUS</p>
+    <h3><strong>{{RobotShowViewModel.robot.cGoal | currency : $ : 2}}</strong></h3>
+
+  </div>
+
+</div>
+
+</div>
 
 <!-- Name and tagline container -->
 <div id="robot-splash-container">
@@ -26,11 +40,6 @@
       <!-- Gallery -->
       <p class="robot-subtitle">// IN THE FIELD</p>
       <div id="robot-gallery-container">
-        <img class="placeholder-image" />
-        <img class="placeholder-image" />
-        <img class="placeholder-image" />
-        <img class="placeholder-image" />
-        <img class="placeholder-image" />
       </div>
       <br  />
     </div>
@@ -69,7 +78,7 @@
       <div id="statistics-bottom-container">
         <!-- History -->
         <div id="history-container">
-          <h4 class="robot-subtitle">// HISTORY</h4>
+          <h4 class="robot-subtitle-2">// HISTORY</h4>
           <p>Name: <strong>{{RobotShowViewModel.robot.name}}</strong></p>
           <p>Manufacturer: <strong>{{RobotShowViewModel.robot.corporation}}</strong></p>
           <p>Country: <strong>{{RobotShowViewModel.robot.country}}</strong></p>
@@ -79,18 +88,20 @@
 
         <!-- Pilots -->
         <div id="pilots-container">
-          <h4 class="robot-subtitle">// PILOTS</h4>
+          <h4 class="robot-subtitle-2">// PILOT</h4>
           <div>
             <!-- <p class="brain-pilot">Left Brain</p> -->
             <p><strong>{{RobotShowViewModel.robot.pLName}}</strong></p>
             <p>Nationality: {{RobotShowViewModel.robot.pLNationality}}</p>
-            <p>Battles won: {{RobotShowViewModel.robot.pLBattles}}</p>
+            <p>Missions: {{RobotShowViewModel.robot.pLBattles}}</p>
           </div>
+          <br  />
+          <h4 class="robot-subtitle-2">// FIRST OFFICER</h4>
           <div>
             <!-- <p class="brain-pilot">Right Brain</p> -->
             <p><strong>{{RobotShowViewModel.robot.pRName}}</strong></p>
             <p>Nationality: {{RobotShowViewModel.robot.pRNationality}}</p>
-            <p>Battles won: {{RobotShowViewModel.robot.pRBattles}}</p>
+            <p>Missions: {{RobotShowViewModel.robot.pRBattles}}</p>
           </div>
         </div>
       </div>
