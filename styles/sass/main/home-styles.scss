@@ -1,0 +1,60 @@
+@import "../main/import-styles.scss";
+
+/**************************************************
+Homepage Styles
+**************************************************/
+
+/* Jumbo Image */
+
+.jumbo-image {
+  height: 40em;
+  width: 100%;
+  background-color: lightgray;
+  background-size: cover;
+
+  &__heading {
+    display: flex;
+    justify-content: flex-start;
+    height: 5.5em;
+  }
+
+  &__row {
+    padding-left: 6em;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+  }
+
+  &__title  {
+    font-family: $primaryFontCondensed;
+    font-size: 2.8em;
+    font-weight: 600;
+    letter-spacing: .05em;
+    color: white;
+    margin-right: 1em;
+    margin-top: .25em;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    color: white;
+    margin-top: 1.5em;
+    text-transform: uppercase;
+    font-size: .75em;
+    font-weight: 200;
+    letter-spacing: .7em
+  }
+
+  &__arrow-container {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-self: flex-end;
+  }
+
+  &__arrow {
+    width: 2.5em;
+  }
+}

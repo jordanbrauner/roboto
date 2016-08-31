@@ -35,25 +35,17 @@ NAV
   margin-bottom: 1em;
 
   /* Notice bar fonts */
-  &__p, &__link {
+  &__p {
     margin: 0;
     font: normal normal normal .85em $primaryFont;
   }
 
-  &__p--light, &__link-light {
+  &__p--light {
     color: white;
   }
 
   &__p--dark {
     color: $colorMediumGray;
-  }
-
-  &__link {
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: red;
-    }
   }
 
   /* Notice Bar Latest (left column) */
@@ -124,5 +116,19 @@ NAV
     font-size: .7em;
     letter-spacing: .125em;
     font-weight: 700;
+  }
+}
+
+/**************************************************
+Links in nav
+**************************************************/
+
+.link--nav-light {
+  color: white;
+  font: normal normal normal 1em $primaryFont;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: red;
   }
 }

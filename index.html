@@ -16,6 +16,7 @@
   <link rel="stylesheet" type="text/css" href="/styles/css/main/import-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/core-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/nav-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/main/home-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/robots/index-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/robots/show-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/robots/form-styles.css">
@@ -36,14 +37,14 @@
         <div class="notice-bar">
             <div class="notice-bar__latest" data-ng-controller="RobotIndexController as RobotIndexViewModel">
               <div data-ng-repeat="robot in RobotIndexViewModel.robots | limitTo:-1">
-                <p class="notice-bar__p notice-bar__p--dark">Latest arrival:&nbsp;<a class="link notice-bar__link--dark" data-ui-sref="robotShow(robot)"><strong>{{robot.name}}</strong></a></p>
+                <p class="notice-bar__p notice-bar__p--dark">Latest arrival:&nbsp;<a class="link link--dark link--hover-red" data-ui-sref="robotShow(robot)"><strong>{{robot.name}}</strong></a></p>
               </div>
             </div>
             <div class="notice-bar__account">
               <div class="notice-bar__arrow">
                 <img src="/img/design-elements/box-arrow-notice.png" />
               </div>
-              <p class="notice-bar__p notice-bar__p--light">New to Roboto?&nbsp;<a class="notice-bar__link-light" data-ui-sref="robotIndex"><strong>Sign up</strong></a></p>
+              <p class="notice-bar__p notice-bar__p--light">New to Roboto?&nbsp;<a class="link link--nav-light link--hover-white" data-ui-sref="robotIndex"><strong>Sign up</strong></a></p>
             </div>
           </div>
         </div>
@@ -54,11 +55,11 @@
             <a class="link" data-ui-sref="robotIndex"><img class="logo-container__img" src="img/roboto/roboto-logo-f.png" /></a>
           </div>
           <div class="nav-options-container">
-            <p class="nav-options-container__p"><a class="link" data-ui-sref="robotIndex">WAREHOUSE</a></p>
+            <p class="nav-options-container__p"><a class="link link--dark link--hover-red" data-ui-sref="robotIndex">WAREHOUSE</a></p>
             <div class="main-nav__rule"></div>
-            <p class="nav-options-container__p"><a class="link" data-ui-sref="robotoAbout">ABOUT</a></p>
+            <p class="nav-options-container__p"><a class="link link--dark link--hover-red" data-ui-sref="robotoAbout">ABOUT</a></p>
             <div class="main-nav__rule"></div>
-            <p class="nav-options-container__p"><a class="link" data-ui-sref="robotNew">CAMPAIGN</a></p>
+            <p class="nav-options-container__p"><a class="link link--dark link--hover-red" data-ui-sref="robotNew">CAMPAIGN</a></p>
           </div>
         </div>
       </div>
@@ -83,11 +84,11 @@
 
       <!-- Right side of footer container containing nav links -->
       <div class="footer__right-col">
-        <a class="link link--footer" data-ui-sref="robotIndex">WAREHOUSE</a>
+        <a class="link link--footer link--hover-white" data-ui-sref="robotIndex">WAREHOUSE</a>
         <div class="footer__rule--vertical"></div>
-        <a class="link link--footer" data-ui-sref="robotoAbout">ABOUT</a>
+        <a class="link link--footer link--hover-white" data-ui-sref="robotoAbout">ABOUT</a>
         <div class="footer__rule--vertical"></div>
-        <a class="link link--footer" data-ui-sref="robotNew">CAMPAIGN</a>
+        <a class="link link--footer link--hover-white" data-ui-sref="robotNew">CAMPAIGN</a>
       </div>
     </div>
   </footer>

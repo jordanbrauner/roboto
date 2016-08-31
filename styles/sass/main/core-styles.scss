@@ -49,15 +49,30 @@ Main Fonts
 **************************************************/
 
 .link, .link:visited, .link:active {
-  color: black;
   text-decoration: none;
   transition: color 0.2s ease;
+  margin: 0;
 }
 
 .link:hover {
-  color: red;
   text-decoration: none;
   cursor: pointer;
+}
+
+.link--dark {
+  color: black;
+}
+
+.link--hover-red:hover {
+  color: red;
+}
+
+.link--hover-black:hover {
+  color: black;
+}
+
+.link--hover-white:hover {
+  color: white;
 }
 
 .robot-subtitle-1, .robot-subtitle-2 {
