@@ -5,7 +5,7 @@ ROBOT OVERVIEW (large image, funding overview)
 *************************/
 
 .robot-overview {
-  margin: 2em $layoutMargin 5em $layoutMargin;
+  margin: 2em $layoutMargin 2em $layoutMargin;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -29,14 +29,14 @@ ROBOT OVERVIEW (large image, funding overview)
 
 /* Also (.robot-overview__right-col) */
 .campaign-info {
-  margin-top: 1em;
+  margin-top: .5em;
   margin-left: 5%;
   width: 35%;
 
   // Fonts
   &__statistic {
     margin: 0;
-    font-size: 2.75em;
+    font-size: 2.5em;
     font-weight: bold;
   }
 
@@ -87,7 +87,7 @@ ROBOT OVERVIEW (large image, funding overview)
 
   // Row 3
   &__btn {
-    margin-top: 1.75em;
+    margin: 1.75em 0;
     width: 100%;
     height: 4em;
     display: flex;
@@ -110,9 +110,11 @@ ROBOT OVERVIEW (large image, funding overview)
 
   // Row 4 - Column 1 of 3
   &__asterik {
+    width: 5%;
+    margin-right: .5%;
     position: relative;
-    top: -.25em;
-    font-size: 2em;
+    top: -.1em;
+    font-size: 1em;
     font-weight: 600;
     color: $colorLightGray;
 
@@ -120,44 +122,32 @@ ROBOT OVERVIEW (large image, funding overview)
 
   // Row 4 - Column 2 of 3
   &__disclaimer {
-    font-size: 0.7em;
+    width: 45.5%;
+    margin-right: 9%;
+    font-size: 0.6em;
     color: $colorLightGray;
 
   }
 
   // Row 4 - Column 3 of 3
   &__share {
-
+    width: 40%;
   }
 
 }
 
-
-
-
 /*************************
-???
-*************************/
-
-/* Content Container */
-#show-container {
-  margin-top: 2em;
-  padding-bottom: 5em;
-  display: flex;
-}
-
-/*************************
-SPLASH CONTAINER
+ROBOT NAME AND TAGLINE
 *************************/
 
 /* Splash Info */
-#robot-splash-container {
+.robot-heading-container {
   display: flex;
   justify-content: flex-start;
-  height: 5.5em;
+  height: 5em;
 }
 
-#robot-splash-text {
+.robot-heading {
   padding-left: $layoutMargin;
   width: 65%;
   display: flex;
@@ -165,7 +155,7 @@ SPLASH CONTAINER
   background-color: #000;
 }
 
-#robot-splash-text h3 {
+.robot-heading__name {
   font-family: $fontPrimaryCondensed;
   font-size: 2.8em;
   font-weight: 600;
@@ -176,7 +166,7 @@ SPLASH CONTAINER
   text-transform: uppercase;
 }
 
-#robot-splash-text h4 {
+.robot-heading__tagline {
   font-weight: 400;
   color: white;
   margin-top: 1.5em;
@@ -186,88 +176,69 @@ SPLASH CONTAINER
   letter-spacing: .7em
 }
 
-#splash-container-arrow {
+.robot-heading__arrow-container {
   width: 25%;
   height: 100%;
   display: flex;
   align-self: flex-end;
 }
 
-#splash-container-arrow img {
+.robot-heading__arrow {
   width: 2.5em;
 }
 
-#edit-robot {
-  text-align: center;
-  width: 10%;
-  height: 100%;
+/*************************
+ROBOT BODY CONTAINER
+*************************/
+
+.robot-body-container {
   display: flex;
   justify-content: center;
-  align-content: center;
-  align-items: center;
-  transition: background-color 0.25s ease;
 }
 
-#edit-robot:hover {
-  background-color: #c4c4c4;
+/* Content Container */
+.robot-body {
+  margin: 2em $layoutMargin 5em $layoutMargin;
+  display: flex;
 }
 
-#edit-robot:hover p a {
-  color: white;
-}
-
-#edit-robot p a {
-  text-align: center;
-  font-size: .8em;
-  text-transform: uppercase;
-  color: #c4c4c4;
-  transition: background-color 0.25s ease;
-}
 /*************************
 LEFT CONTAINER
 *************************/
 
-#robot-left-container {
-  width: 60%;
-  padding-left: 6em;
-  padding-right: 4em;
+.robot-body__left-col {
+  width: 55%;
+  margin-right: 5%;
   margin-top: 3em;
 }
 
 /* Bio and Gallery */
-#robot-bio {
+.robot-body__bio {
   font-size: .85em;
   line-height: 2em;
   margin-bottom: 5em;
-}
-
-#robot-gallery-container {
-  display: flex;
-}
-
-.placeholder-image {
-  height: 6em;
-  width: 6em;
-  background-color: #BBB;
-  margin-right: 1em;
-}
-
-.placeholder-image:hover {
-  opacity: 0.8;
 }
 
 /*************************
 RIGHT CONTAINER
 *************************/
 
-#robot-right-container {
-  width: 40%;
+.robot-body__right-col {
+  width: 35%;
   margin-top: 1em;
-  padding: 0 6em 0 3em;
+  padding: 0 0 3em 5%;
   border-left: .1em solid lightgray;
 }
 
-/* Statistics Title */
+/* Corporations */
+.corporation {
+
+}
+
+/* Statistics */
+.robot-statistics {
+  margin-top: 3em;
+}
 #statistics-title {
   display: flex;
   justify-content: flex-start;

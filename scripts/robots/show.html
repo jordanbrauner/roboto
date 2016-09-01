@@ -1,0 +1,163 @@
+<!-- Robot Overview (robot image, campaign overview) -->
+<div class="robot-overview max-width-container">
+
+  <!-- Robot image -->
+  <div class="robot-overview__left-col">
+    <img class="robot-overview__image" ng-src="{{RobotShowViewModel.robot.photoUrl}}"  />
+  </div>
+
+  <!-- Campaign Information -->
+  <div class="robot-overview__right-col campaign-info">
+    <p class="section-header section-header--primary">// CAMPAIGN STATUS</p>
+    <!-- Row 1 -->
+    <div class="row-custom row-custom--align-center campaign-info__row campaign-info__row--padded">
+      <div class="campaign-info__contributors campaign-info__col">
+        <h3 class="campaign-info__statistic .font--mc">392</h3>
+        <p class="campaign-info__statistic-text font--m">Contributors</p>
+      </div>
+      <div class="vertical-rule vertical-rule--thin vertical-rule--robot-overview"></div>
+      <div class="campaign-info__days-left campaign-info__col">
+        <h3 class="campaign-info__statistic .font--mc">14</h3>
+        <p class="campaign-info__statistic-text font--m">Days left</p>
+      </div>
+      <div class="vertical-rule vertical-rule--thin vertical-rule--robot-overview"></div>
+      <div class="campaign-info__campaign campaign-info__col">
+        <h3 class="campaign-info__statistic .font--mc">3</h3>
+        <p class="campaign-info__statistic-text font--m">Campaigns</p>
+      </div>
+    </div>
+    <div class="horizontal-rule horizontal-rule--thin"></div>
+    <!-- Row 2 -->
+    <div class="campaign-info__pledged-container">
+      <h3 class="campaign-info__statistic .font--mc">{{RobotShowViewModel.robot.cGoal | currency : $ : 0}}&nbsp;</h3>
+      <p class="campaign-info__statistic-text campaign-info__pledged-of font--m">pledged of $1,250,000</p>
+    </div>
+    <!-- Row 3 -->
+    <div class="campaign-info__btn font--m">Contribute Now</div>
+    <!-- Row 4 -->
+    <div class="row-custom campaign-info__row">
+      <div class="campaign-info__asterik font--m">*</div>
+      <div class="campaign-info__disclaimer font--m">Have you ever tried just turning off the TV, sitting down with your children, and hitting them? Bender?! You stole the atom. Oh, I think we should.</div>
+      <div class="campaign-info__share font--m section-header">// SHARE</div>
+    </div>
+  </div>
+</div>
+
+<!-- Name and tagline container -->
+<div class="robot-heading-container section-background--light">
+  <div class="robot-heading">
+    <a class="link" data-ui-sref="robotEdit({id: RobotShowViewModel.robot.id })"><h3 class="robot-heading__name">{{RobotShowViewModel.robot.name}}</h3></a>
+    <h4 class="robot-heading__tagline">{{RobotShowViewModel.robot.tagline}}</h4>
+  </div>
+  <div class="robot-heading__arrow-container">
+    <img class="robot-heading__arrow" src="/img/design-elements/box-arrow.png" />
+  </div>
+</div>
+
+<!-- Container for Robot Show -->
+<div class="robot-body-container section-background--light">
+  <div class="robot-body max-width-container">
+
+    <!-- Left body container (Bio, Gallery) -->
+    <div class="robot-body__left-col">
+      <!-- Bio -->
+      <p class="robot-body__bio font--m">{{RobotShowViewModel.robot.bio}}</p>
+    </div>
+
+    <!-- Right content container (Statistics, History, Pilots) -->
+    <div class="robot-body__right-col">
+
+      <!-- Corporation -->
+      <div class="corporation">
+        <p class="section-header section-header--primary">// CORPORATION</p>
+        <div class="section-header section-header--no-rule"><strong>{{RobotShowViewModel.robot.corporation}}</strong></div>
+        <p class="font--m font-size--body">A leader in Kaiju defense for 25 years. Have you ever tried just turning off the TV, sitting down with your children, and hitting them? Bender?! You stole the atom. Oh, I think we should just stay friends.</p>
+        <div class="horizontal-rule horizontal-rule--thin"></div>
+        <div class="row-custom">
+          <div class="corporation__col">
+            <p class="font--m font-size--body">Country:&nbsp;<strong>Japan</strong></p>
+            <p class="font--m font-size--body">Founded:&nbsp;<strong>2012</strong></p>
+          </div>
+          <div class="vertical-rule--thin"></div>
+          <div class="corporation__col">
+            <p class="font--m font-size--body">Robots built:&nbsp;<strong>42</strong></p>
+            <p class="font--m font-size--body">WRA Rating:&nbsp;<strong>AAA</strong></p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Statistics -->
+      <div class="robot-statistics">
+        <p class="section-header section-header--primary">// STATISTICS</p>
+      </div>
+
+      <!-- <div id="statistics-info-container">
+        <div class="statistics-circle" id="stat-power">
+          <h4>{{RobotShowViewModel.robot.sPower}}</h4>
+          <p>Power</p>
+        </div>
+        <div class="statistics-circle" id="stat-energy">
+          <h4>{{RobotShowViewModel.robot.sEnergy}}</h4>
+          <p>Energy</p>
+        </div>
+        <div class="statistics-circle" id="stat-agility">
+          <h4>{{RobotShowViewModel.robot.sAgility}}</h4>
+          <p>Agility</p>
+        </div>
+        <div class="statistics-circle" id="stat-armor">
+          <h4>{{RobotShowViewModel.robot.sArmor}}</h4>
+          <p>Armor</p>
+        </div>
+      </div> -->
+
+      <!-- Bottom right section of robot stats -->
+      <div id="statistics-bottom-container">
+
+        <!-- History -->
+        <div id="history-container">
+          <h4 class="section-header section-header--secondary">// HISTORY</h4>
+          <p>Name: <strong>{{RobotShowViewModel.robot.name}}</strong></p>
+          <p>Manufacturer: <strong>{{RobotShowViewModel.robot.corporation}}</strong></p>
+          <p>Country: <strong>{{RobotShowViewModel.robot.country}}</strong></p>
+          <p>Class: <strong>{{RobotShowViewModel.robot.rClass}}</strong></p>
+          <p>Year: <strong>{{RobotShowViewModel.robot.year}}</strong></p>
+        </div>
+
+        <!-- Pilots -->
+        <div id="pilots-container">
+          <h4 class="section-header section-header--secondary">// PILOT</h4>
+          <div>
+            <!-- <p class="brain-pilot">Left Brain</p> -->
+            <p><strong>{{RobotShowViewModel.robot.pLName}}</strong></p>
+            <p>Nationality: {{RobotShowViewModel.robot.pLNationality}}</p>
+            <p>Missions: {{RobotShowViewModel.robot.pLBattles}}</p>
+          </div>
+          <br  />
+          <h4 class="section-header section-header--secondary">// FIRST OFFICER</h4>
+          <div>
+            <!-- <p class="brain-pilot">Right Brain</p> -->
+            <p><strong>{{RobotShowViewModel.robot.pRName}}</strong></p>
+            <p>Nationality: {{RobotShowViewModel.robot.pRNationality}}</p>
+            <p>Missions: {{RobotShowViewModel.robot.pRBattles}}</p>
+          </div>
+
+        </div>
+
+      <!-- END: History and Pilots container  -->
+      </div>
+
+    <!-- END: Right content container and its container -->
+    </div>
+
+  <!-- END: Show container -->
+  </div>
+
+<!-- END: Robo body container -->
+</div>
+
+<!-- Contributions Container -->
+<!-- <div id="contributions-container" data-ng-include="'/scripts/robots/contributions/_contributions.html'"></div> -->
+
+<!-- More Container -->
+<!-- <div id="more-container" data-ng-include="'/scripts/robots/partials/_more.html'"></div> -->

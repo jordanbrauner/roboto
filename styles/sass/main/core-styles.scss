@@ -19,27 +19,32 @@ button {
   padding: 0;
 }
 
-// #show-width-limit, #index-width-limit {
-//   margin: 0 auto;
-//   max-width: 1300px;
-// }
-//
-// #contributions-width-limit.ng-scope {
-//   max-width: 1300px;
-// }
-//
-// #about-width-limit {
-//   max-width: 1300px;
-// }
-//
-// #more-width-limit.ng-scope {
-//   max-width: 1300px;
-//   width: 100%;
-//   margin: 0 auto;
-//   padding: 0;
-// }
+.angular-view.ng-scope {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.nav-bar-push {
+// Layout - Max-Width
+.max-width-container, #index-width-limit, #about-width-limit,
+#more-width-limit.ng-scope, #contributions-width-limit.ng-scope,
+.robot-overview.ng-scope {
+  align-self: center;
+  max-width: $layoutMaxWidth;
+}
+
+#show-width-limit, #index-width-limit {
+  margin: 0 auto;
+}
+
+#more-width-limit.ng-scope {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav-bar__margin {
   width: 100%;
   height: 8.5em;
 }
@@ -90,6 +95,10 @@ Structure
   height: 50px;
 }
 
+.section-background--light {
+  background-color: $colorBackgroundLight;
+}
+
 /**************************************************
 Main Fonts
 **************************************************/
@@ -100,6 +109,12 @@ Main Fonts
 
 .font--mc {
   font-family: $fontPrimaryCondensed;
+}
+
+.font-size--body {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 .font-color--r {
@@ -134,17 +149,24 @@ Main Fonts
 }
 
 .section-header {
-  font-size: .9em;
-  font-weight: 600;
+  font-family: $fontPrimary;
+  font-size: .8em;
+  font-weight: 700;
   text-transform: uppercase;
-  padding-bottom: .5em;
-  margin-bottom: 1.5em;
 }
 
 .section-header--primary {
+  padding-bottom: .5em;
+  margin-bottom: 1.5em;
   border-bottom: 3px solid black;
 }
 
 .section-header--secondary {
+  padding-bottom: .5em;
+  margin-bottom: 1.5em;
   border-bottom: 1px solid black;
+}
+
+.section-header--no-rule {
+  margin-bottom: 0.75em;
 }
