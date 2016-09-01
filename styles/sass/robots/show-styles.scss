@@ -110,9 +110,10 @@ ROBOT OVERVIEW (large image, funding overview)
 
   // Row 4 - Column 1 of 3
   &__asterik {
-    width: 5%;
+    width: 4%;
     margin-right: .5%;
     position: relative;
+    text-align: center;
     top: -.1em;
     font-size: 1em;
     font-weight: 600;
@@ -123,7 +124,7 @@ ROBOT OVERVIEW (large image, funding overview)
   // Row 4 - Column 2 of 3
   &__disclaimer {
     width: 45.5%;
-    margin-right: 9%;
+    margin-right: 10%;
     font-size: 0.6em;
     color: $colorLightGray;
 
@@ -203,10 +204,10 @@ ROBOT BODY CONTAINER
 }
 
 /*************************
-LEFT CONTAINER
+Main column
 *************************/
 
-.robot-body__left-col {
+.robot-body__main-col{
   width: 55%;
   margin-right: 5%;
   margin-top: 3em;
@@ -215,88 +216,58 @@ LEFT CONTAINER
 /* Bio and Gallery */
 .robot-body__bio {
   font-size: .85em;
-  line-height: 2em;
-  margin-bottom: 5em;
+  line-height: 1.75em;
+  margin-bottom: 2em;
 }
 
 /*************************
-RIGHT CONTAINER
+Side-bar
 *************************/
 
-.robot-body__right-col {
+.robot-body__sidebar {
   width: 35%;
   margin-top: 1em;
-  padding: 0 0 3em 5%;
+  padding: 0 0 0 5%;
   border-left: .1em solid lightgray;
 }
 
 /* Corporations */
-.corporation {
+.robot-body__corporation {
 
 }
 
 /* Statistics */
-.robot-statistics {
-  margin-top: 3em;
-}
-#statistics-title {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.robot-body__statistics-container {
+  margin-top: 4.25em;
 }
 
-.title-rule {
-  width: 33%;
-  height: 1%;
-  border-top: 1px solid black;
-}
-
-.title-box {
-  box-sizing: border-box;
-  text-align: center;
-  padding-top: .65em;
-  width: 9.5em;
-  height: 4.25em;
-  background-color: black;
-  color: white;
-  font-family: $fontPrimaryCondensed;
-  font-size: 1.1em;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .025em;
-  border: 12px solid white;
-}
-
-/* Statistics */
-#statistics-info-container {
+.robot-body__statistics {
   margin-top: 1.5em;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin-bottom: 5em;
 }
 
-#statistics-title .title-box {
-  cursor: default;
-}
-
-.statistics-circle {
-  min-width: 4.5em;
-  max-width: 4.5em;
-  min-height: 4.5em;
-  max-height: 4.5em;
+.statistics__circle {
+  min-width: 4em;
+  max-width: 4em;
+  min-height: 4em;
+  max-height: 4em;
   border: 1.5px solid black;
   border-radius: 360px;
   text-align: center;
   transition: border 0.25s ease;
+  margin-right: 1em;
+  text-align: center;
+
+  &:hover {
+    cursor: default;
+  }
 }
 
-.statistics-circle:hover {
-  cursor: default;
-}
-
-.statistics-circle h4 {
-  padding-top: .105em;
-  padding-left: .725em;
+.statistics__number {
+  position: relative;
+  left: .6125em;
   display: flex;
   align-self: center;
   font-family: $fontPrimaryCondensed;
@@ -305,8 +276,8 @@ RIGHT CONTAINER
   transition: color 0.25s ease;
 }
 
-.statistics-circle p {
-  padding-top: 1em;
+.statistics__name {
+  padding-top: .75em;
   font-family: $fontPrimary;
   font-weight: 700;
   font-size: .75em;
@@ -316,68 +287,62 @@ RIGHT CONTAINER
 }
 
 /* Hover effects */
-#stat-power:hover {
-  border: 1.5px solid #f17022;
+.statistics__circle--power {
+  &:hover {
+    border: 1.5px solid #f17022;
+    .statistics__number, .statistics__name {
+      color: #f17022;
+    }
+  }
 }
 
-#stat-power:hover > h4, #stat-power:hover > p {
-  color: #f17022;
+.statistics__circle--energy {
+  &:hover {
+    border: 1.5px solid #fdb813;
+    .statistics__number, .statistics__name {
+      color: #fdb813;
+    }
+  }
 }
 
-#stat-energy:hover {
-  border: 1.5px solid #fdb813;
+.statistics__circle--agility {
+  &:hover {
+    border: 1.5px solid #f68b1f;
+    .statistics__number, .statistics__name {
+      color: #f68b1f;
+    }
+  }
 }
 
-#stat-energy:hover > h4, #stat-energy:hover > p {
-  color: #fdb813;
+.statistics__circle--armor {
+  &:hover {
+    border: 1.5px solid #62c2cc;
+    .statistics__number, .statistics__name {
+      color: #62c2cc;
+    }
+  }
 }
 
-#stat-agility:hover {
-  border: 1.5px solid #f68b1f;
-}
+/* Sidebar - Bottom (History, Pilots) */
 
-#stat-agility:hover > h4, #stat-agility:hover > p {
-  color: #f68b1f;
-}
-
-#stat-armor:hover {
-  border: 1.5px solid #62c2cc;
-}
-
-#stat-armor:hover > h4, #stat-armor:hover > p {
-  color: #62c2cc;
-}
-
-
-/* Bottom section (History, Pilots) */
-
-#statistics-bottom-container {
+.robot-body__sidebar-row {
   display: flex;
 }
 
-#statistics-bottom-container p {
-  font-size: .85em;
-}
-
-#history-container {
+.robot-body__history-container {
   width: 45%;
   margin-right: 10%;
 }
 
-#history-container p {
-  font-size: .85em;
-  margin-bottom: .3em;
-}
-
-#pilots-container {
+.robot-body__pilots-container {
   width: 45%;
 }
 
-#pilots-container div {
+.robot-body__pilots-container div {
   margin-bottom: 1em;
 }
 
-#pilots-container div p {
+.robot-body__pilots-container div p {
   margin-bottom: .3em;
   font-size: .85em;
 }

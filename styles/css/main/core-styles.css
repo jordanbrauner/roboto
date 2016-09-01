@@ -53,8 +53,8 @@ Structure
 .row-custom {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: space-between; }
 
 .row-custom--align-center {
   align-items: center; }
@@ -97,6 +97,11 @@ Main Fonts
   font-size: 0.8em;
   line-height: 1.5em;
   margin-bottom: 0.5em; }
+
+.font-size--sidebar {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin-bottom: 0.25em; }
 
 .font-color--r {
   color: white; }

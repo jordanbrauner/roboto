@@ -11,7 +11,7 @@ Variables
 /**************************************************
 Top Section
 **************************************************/
-#contributions-container {
+.contributions-container {
   display: flex;
   justify-content: center;
   padding-bottom: 10em;
@@ -64,7 +64,8 @@ Middle Section
   padding-bottom: .7em;
   margin-bottom: 1.5em;
   border-bottom: 2px solid white;
-  font-weight: 700; }
+  font-weight: 700;
+  text-transform: uppercase; }
 
 #about-corporation, #top-contributions, #recent-contributions {
   width: 26%;

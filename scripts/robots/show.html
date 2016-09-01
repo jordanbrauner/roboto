@@ -59,16 +59,20 @@
   <div class="robot-body max-width-container">
 
     <!-- Left body container (Bio, Gallery) -->
-    <div class="robot-body__left-col">
+    <div class="robot-body__main-col">
       <!-- Bio -->
+      <p class="robot-body__bio font--m">{{RobotShowViewModel.robot.bio}}</p>
+      <p class="robot-body__bio font--m"><strong>THE NEXT GENERATION</strong></p>
+      <p class="robot-body__bio font--m">{{RobotShowViewModel.robot.bio}}</p>
+      <p class="robot-body__bio font--m"><strong>WE'RE IN THIS TOGETHER</strong></p>
       <p class="robot-body__bio font--m">{{RobotShowViewModel.robot.bio}}</p>
     </div>
 
     <!-- Right content container (Statistics, History, Pilots) -->
-    <div class="robot-body__right-col">
+    <div class="robot-body__sidebar">
 
-      <!-- Corporation -->
-      <div class="corporation">
+      <!-- Sidebar: Corporation -->
+      <div class="robot-body__corporation">
         <p class="section-header section-header--primary">// CORPORATION</p>
         <div class="section-header section-header--no-rule"><strong>{{RobotShowViewModel.robot.corporation}}</strong></div>
         <p class="font--m font-size--body">A leader in Kaiju defense for 25 years. Have you ever tried just turning off the TV, sitting down with your children, and hitting them? Bender?! You stole the atom. Oh, I think we should just stay friends.</p>
@@ -87,59 +91,57 @@
       </div>
 
 
-      <!-- Statistics -->
-      <div class="robot-statistics">
+      <!-- Sidebar: Statistics -->
+      <div class="robot-body__statistics-container">
         <p class="section-header section-header--primary">// STATISTICS</p>
+
+        <div class="robot-body__statistics">
+          <div class="statistics__circle statistics__circle--power">
+            <h4 class="statistics__number">{{RobotShowViewModel.robot.sPower}}</h4>
+            <p class="statistics__name">Power</p>
+          </div>
+          <div class="statistics__circle statistics__circle--energy">
+            <h4 class="statistics__number">{{RobotShowViewModel.robot.sEnergy}}</h4>
+            <p class="statistics__name">Energy</p>
+          </div>
+          <div class="statistics__circle statistics__circle--agility">
+            <h4 class="statistics__number">{{RobotShowViewModel.robot.sAgility}}</h4>
+            <p class="statistics__name">Agility</p>
+          </div>
+          <div class="statistics__circle statistics__circle--armor">
+            <h4 class="statistics__number">{{RobotShowViewModel.robot.sArmor}}</h4>
+            <p class="statistics__name">Armor</p>
+          </div>
+        </div>
       </div>
 
-      <!-- <div id="statistics-info-container">
-        <div class="statistics-circle" id="stat-power">
-          <h4>{{RobotShowViewModel.robot.sPower}}</h4>
-          <p>Power</p>
-        </div>
-        <div class="statistics-circle" id="stat-energy">
-          <h4>{{RobotShowViewModel.robot.sEnergy}}</h4>
-          <p>Energy</p>
-        </div>
-        <div class="statistics-circle" id="stat-agility">
-          <h4>{{RobotShowViewModel.robot.sAgility}}</h4>
-          <p>Agility</p>
-        </div>
-        <div class="statistics-circle" id="stat-armor">
-          <h4>{{RobotShowViewModel.robot.sArmor}}</h4>
-          <p>Armor</p>
-        </div>
-      </div> -->
-
       <!-- Bottom right section of robot stats -->
-      <div id="statistics-bottom-container">
+      <div class="robot-body__sidebar-row">
 
         <!-- History -->
-        <div id="history-container">
+        <div class="robot-body__history-container">
           <h4 class="section-header section-header--secondary">// HISTORY</h4>
-          <p>Name: <strong>{{RobotShowViewModel.robot.name}}</strong></p>
-          <p>Manufacturer: <strong>{{RobotShowViewModel.robot.corporation}}</strong></p>
-          <p>Country: <strong>{{RobotShowViewModel.robot.country}}</strong></p>
-          <p>Class: <strong>{{RobotShowViewModel.robot.rClass}}</strong></p>
-          <p>Year: <strong>{{RobotShowViewModel.robot.year}}</strong></p>
+          <p class="font--m font-size--sidebar">Name: <strong>{{RobotShowViewModel.robot.name}}</strong></p>
+          <p class="font--m font-size--sidebar">Manufacturer: <strong>{{RobotShowViewModel.robot.corporation}}</strong></p>
+          <p class="font--m font-size--sidebar">Country: <strong>{{RobotShowViewModel.robot.country}}</strong></p>
+          <p class="font--m font-size--sidebar">Class: <strong>{{RobotShowViewModel.robot.rClass}}</strong></p>
+          <p class="font--m font-size--sidebar">Year: <strong>{{RobotShowViewModel.robot.year}}</strong></p>
         </div>
 
         <!-- Pilots -->
-        <div id="pilots-container">
+        <div class="robot-body__pilots-container">
           <h4 class="section-header section-header--secondary">// PILOT</h4>
           <div>
-            <!-- <p class="brain-pilot">Left Brain</p> -->
-            <p><strong>{{RobotShowViewModel.robot.pLName}}</strong></p>
-            <p>Nationality: {{RobotShowViewModel.robot.pLNationality}}</p>
-            <p>Missions: {{RobotShowViewModel.robot.pLBattles}}</p>
+            <p class="font--m font-size--sidebar"><strong>{{RobotShowViewModel.robot.pLName}}</strong></p>
+            <p class="font--m font-size--sidebar">Nationality: {{RobotShowViewModel.robot.pLNationality}}</p>
+            <p class="font--m font-size--sidebar">Missions: {{RobotShowViewModel.robot.pLBattles}}</p>
           </div>
           <br  />
           <h4 class="section-header section-header--secondary">// FIRST OFFICER</h4>
           <div>
-            <!-- <p class="brain-pilot">Right Brain</p> -->
-            <p><strong>{{RobotShowViewModel.robot.pRName}}</strong></p>
-            <p>Nationality: {{RobotShowViewModel.robot.pRNationality}}</p>
-            <p>Missions: {{RobotShowViewModel.robot.pRBattles}}</p>
+            <p class="font--m font-size--sidebar"><strong>{{RobotShowViewModel.robot.pRName}}</strong></p>
+            <p class="font--m font-size--sidebar">Nationality: {{RobotShowViewModel.robot.pRNationality}}</p>
+            <p class="font--m font-size--sidebar">Missions: {{RobotShowViewModel.robot.pRBattles}}</p>
           </div>
 
         </div>
@@ -147,7 +149,7 @@
       <!-- END: History and Pilots container  -->
       </div>
 
-    <!-- END: Right content container and its container -->
+    <!-- END: Sidebar container and its container -->
     </div>
 
   <!-- END: Show container -->
@@ -157,7 +159,7 @@
 </div>
 
 <!-- Contributions Container -->
-<!-- <div id="contributions-container" data-ng-include="'/scripts/robots/contributions/_contributions.html'"></div> -->
+<div class="contributions-container" data-ng-include="'/scripts/robots/contributions/_contributions.html'"></div>
 
 <!-- More Container -->
 <!-- <div id="more-container" data-ng-include="'/scripts/robots/partials/_more.html'"></div> -->

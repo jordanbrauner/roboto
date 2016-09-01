@@ -50,7 +50,7 @@ NAV
     align-items: center;
     width: 100%;
     font-size: 1em;
-    padding-left: 48px; }
+    padding-left: 60px; }
   .notice-bar__account {
     width: 20em;
     display: flex;
@@ -67,7 +67,7 @@ NAV
   display: flex;
   justify-content: flex-start;
   height: 4.5em;
-  padding-top: .2em;
+  padding: 0.2em 60px 0 60px;
   background-color: white; }
   .main-nav__rule {
     margin-left: 1.2em;
@@ -76,8 +76,7 @@ NAV
 
 .logo-container {
   width: 100%;
-  padding-top: .2em;
-  margin-left: 3.5em; }
+  padding-top: .2em; }
   .logo-container__img {
     width: 23em;
     padding-bottom: -3em; }
@@ -87,8 +86,7 @@ NAV
   justify-content: flex-end;
   align-items: flex-end;
   padding-top: 3.3em;
-  padding-bottom: 2em;
-  margin-right: 4em; }
+  padding-bottom: 2em; }
   .nav-options-container__p {
     margin-left: 1em;
     padding-left: 1em;
