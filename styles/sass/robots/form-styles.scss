@@ -41,7 +41,7 @@ form label {
 }
 
 form h3 {
-  font-family: $primaryFontCondensed;
+  font-family: $fontPrimaryCondensed;
   text-transform: uppercase;
   letter-spacing: -.01em;
   font-size: 3em;
@@ -67,7 +67,7 @@ form textarea {
 }
 
 button {
-  font-family: $primaryFont;
+  font-family: $fontPrimary;
   font-size: .75em;
   text-transform: uppercase;
   background-color: black;

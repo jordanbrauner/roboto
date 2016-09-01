@@ -1,12 +1,143 @@
 @import "../main/import-styles.scss";
 
 /*************************
-CORE STYLES
+ROBOT OVERVIEW (large image, funding overview)
 *************************/
 
-.shadow {
-  box-shadow: inset 0 0 13em rgba(0, 0, 0, 0.2);
+.robot-overview {
+  margin: 2em $layoutMargin 5em $layoutMargin;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+
+  /* Left Column */
+  &__left-col {
+    width: 60%;
+    max-height: 32.4em;
+    overflow: hidden;
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Right Column - see .campaign-info */
 }
+
+/* Also (.robot-overview__right-col) */
+.campaign-info {
+  margin-top: 1em;
+  margin-left: 5%;
+  width: 35%;
+
+  // Fonts
+  &__statistic {
+    margin: 0;
+    font-size: 2.75em;
+    font-weight: bold;
+  }
+
+  &__statistic-text {
+    font-size: 0.75em;
+    color: $colorMediumGray;
+  }
+
+  &__row {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  &__row--padded {
+    padding: 0 1em;
+  }
+
+  &__col {
+    text-align: left;
+  }
+
+  // Row 1 - Column 1 of 3
+  &__contributors {
+  }
+
+  // Row 1 - Column 2 of 3
+  &__days-left {
+
+  }
+
+  // Row 1 - Column 3 of 3
+  &__campaign {
+
+  }
+
+  // Row 2
+  &__pledged-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0 1em;
+  }
+
+  &__pledged-of {
+    position: relative;
+    top: 0.675em;
+  }
+
+  // Row 3
+  &__btn {
+    margin-top: 1.75em;
+    width: 100%;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colorAccent;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: .0125em;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: black;
+      cursor: pointer;
+    }
+
+  }
+
+  // Row 4 - Column 1 of 3
+  &__asterik {
+    position: relative;
+    top: -.25em;
+    font-size: 2em;
+    font-weight: 600;
+    color: $colorLightGray;
+
+  }
+
+  // Row 4 - Column 2 of 3
+  &__disclaimer {
+    font-size: 0.7em;
+    color: $colorLightGray;
+
+  }
+
+  // Row 4 - Column 3 of 3
+  &__share {
+
+  }
+
+}
+
+
+
+
+/*************************
+???
+*************************/
 
 /* Content Container */
 #show-container {
@@ -14,17 +145,6 @@ CORE STYLES
   padding-bottom: 5em;
   display: flex;
 }
-
-/*************************
-MAIN ROBOT CONTAINER
-*************************/
-
-/* Main Image */
-#main-robot-image {
-  width: 60%;
-  height: auto;
-}
-
 
 /*************************
 SPLASH CONTAINER
@@ -38,7 +158,7 @@ SPLASH CONTAINER
 }
 
 #robot-splash-text {
-  padding-left: 6em;
+  padding-left: $layoutMargin;
   width: 65%;
   display: flex;
   align-items: center;
@@ -46,7 +166,7 @@ SPLASH CONTAINER
 }
 
 #robot-splash-text h3 {
-  font-family: $primaryFontCondensed;
+  font-family: $fontPrimaryCondensed;
   font-size: 2.8em;
   font-weight: 600;
   letter-spacing: .05em;
@@ -168,7 +288,7 @@ RIGHT CONTAINER
   height: 4.25em;
   background-color: black;
   color: white;
-  font-family: $primaryFontCondensed;
+  font-family: $fontPrimaryCondensed;
   font-size: 1.1em;
   font-weight: 600;
   text-transform: uppercase;
@@ -208,7 +328,7 @@ RIGHT CONTAINER
   padding-left: .725em;
   display: flex;
   align-self: center;
-  font-family: $primaryFontCondensed;
+  font-family: $fontPrimaryCondensed;
   font-weight: 700;
   font-size: 2.25em;
   transition: color 0.25s ease;
@@ -216,7 +336,7 @@ RIGHT CONTAINER
 
 .statistics-circle p {
   padding-top: 1em;
-  font-family: $primaryFont;
+  font-family: $fontPrimary;
   font-weight: 700;
   font-size: .75em;
   color: #808080;
@@ -266,18 +386,6 @@ RIGHT CONTAINER
 
 #statistics-bottom-container p {
   font-size: .85em;
-}
-
-.robot-subtitle-1 {
-  border-bottom: 2px solid black;
-  padding-bottom: .7em;
-  margin-bottom: 1.5em;
-}
-
-.robot-subtitle-2 {
-  border-bottom: 1px solid black;
-  padding-bottom: .7em;
-  margin-bottom: 1.5em;
 }
 
 #history-container {

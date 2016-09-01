@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Roboto</title>
+  <!-- Vendor -->
   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>   <!-- jQuery -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> <!-- Twitter Bootstrap -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,300italic,400italic,800italic,700italic|Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'> <!-- Twitter Bootstrap - CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> <!-- Twitter Bootstrap - CSS -->
+  <!-- Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> <!-- Angular -->
-  <!-- Angular Plug-Ins -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
   <!-- Scripts -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/import-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/core-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/nav-styles.css">
@@ -37,14 +37,14 @@
         <div class="notice-bar">
             <div class="notice-bar__latest" data-ng-controller="RobotIndexController as RobotIndexViewModel">
               <div data-ng-repeat="robot in RobotIndexViewModel.robots | limitTo:-1">
-                <p class="notice-bar__p notice-bar__p--dark">Latest arrival:&nbsp;<a class="link link--dark link--hover-red" data-ui-sref="robotShow(robot)"><strong>{{robot.name}}</strong></a></p>
+                <p class="notice-bar__p notice-bar__p--dark font--m">Latest arrival:&nbsp;<a class="link link--dark link--hover-red" data-ui-sref="robotShow(robot)"><strong>{{robot.name}}</strong></a></p>
               </div>
             </div>
             <div class="notice-bar__account">
               <div class="notice-bar__arrow">
                 <img src="/img/design-elements/box-arrow-notice.png" />
               </div>
-              <p class="notice-bar__p notice-bar__p--light">New to Roboto?&nbsp;<a class="link link--nav-light link--hover-white" data-ui-sref="robotIndex"><strong>Sign up</strong></a></p>
+              <p class="notice-bar__p font--m font-color--r">New to Roboto?&nbsp;<a class="link link--nav-light link--hover-white" data-ui-sref="robotIndex"><strong>Sign up</strong></a></p>
             </div>
           </div>
         </div>
@@ -55,11 +55,11 @@
             <a class="link" data-ui-sref="robotIndex"><img class="logo-container__img" src="img/roboto/roboto-logo-f.png" /></a>
           </div>
           <div class="nav-options-container">
-            <p class="nav-options-container__p"><a class="link link--dark link--hover-red" data-ui-sref="robotIndex">WAREHOUSE</a></p>
+            <p class="nav-options-container__p"><a class="link link--dark link--hover-red font--m" data-ui-sref="robotIndex">WAREHOUSE</a></p>
             <div class="main-nav__rule"></div>
-            <p class="nav-options-container__p"><a class="link link--dark link--hover-red" data-ui-sref="robotoAbout">ABOUT</a></p>
+            <p class="nav-options-container__p"><a class="link link--dark link--hover-red font--m" data-ui-sref="robotoAbout">ABOUT</a></p>
             <div class="main-nav__rule"></div>
-            <p class="nav-options-container__p"><a class="link link--dark link--hover-red" data-ui-sref="robotNew">CAMPAIGN</a></p>
+            <p class="nav-options-container__p"><a class="link link--dark link--hover-red font--m" data-ui-sref="robotNew">CAMPAIGN</a></p>
           </div>
         </div>
       </div>
@@ -79,16 +79,16 @@
       <!-- Left side of footer containing logo and copyright -->
       <div class="footer__left-col">
         <a class="link--footer" data-ui-sref="robotIndex"><img class="footer__logo" src="/img/roboto/roboto-logo-footer.png"></a>
-        <p class="footer__copyright">&copy; Copyright 20X4-RA-7S</p>
+        <p class="footer__copyright font--m">&copy; Copyright 20X4-RA-7S</p>
       </div>
 
       <!-- Right side of footer container containing nav links -->
       <div class="footer__right-col">
-        <a class="link link--footer link--hover-white" data-ui-sref="robotIndex">WAREHOUSE</a>
+        <a class="link link--footer link--hover-white font--m" data-ui-sref="robotIndex">WAREHOUSE</a>
         <div class="footer__rule--vertical"></div>
-        <a class="link link--footer link--hover-white" data-ui-sref="robotoAbout">ABOUT</a>
+        <a class="link link--footer link--hover-white font--m" data-ui-sref="robotoAbout">ABOUT</a>
         <div class="footer__rule--vertical"></div>
-        <a class="link link--footer link--hover-white" data-ui-sref="robotNew">CAMPAIGN</a>
+        <a class="link link--footer link--hover-white font--m" data-ui-sref="robotNew">CAMPAIGN</a>
       </div>
     </div>
   </footer>

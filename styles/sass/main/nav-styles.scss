@@ -37,11 +37,7 @@ NAV
   /* Notice bar fonts */
   &__p {
     margin: 0;
-    font: normal normal normal .85em $primaryFont;
-  }
-
-  &__p--light {
-    color: white;
+    font: normal normal normal .85em $fontPrimary;
   }
 
   &__p--dark {
@@ -53,7 +49,8 @@ NAV
     display: flex;
     align-items: center;
     width: 100%;
-    padding-left: 4em;
+    font-size: 1em;
+    padding-left: $layoutMargin - 4;
   }
 
   /* Notice Bar Account (nav right column) */
@@ -98,7 +95,6 @@ NAV
   &__img {
     width: 23em;
     padding-bottom: -3em;
-
   }
 }
 
@@ -113,8 +109,8 @@ NAV
   &__p {
     margin-left: 1em;
     padding-left: 1em;
-    font-size: .7em;
-    letter-spacing: .125em;
+    // letter-spacing: .125em;
+    font-size: .8em;
     font-weight: 700;
   }
 }
@@ -125,7 +121,7 @@ Links in nav
 
 .link--nav-light {
   color: white;
-  font: normal normal normal 1em $primaryFont;
+  font: normal normal normal 1em $fontPrimary;
   transition: color 0.2s ease;
 
   &:hover {

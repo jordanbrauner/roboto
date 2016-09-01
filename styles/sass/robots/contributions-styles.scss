@@ -22,7 +22,7 @@ Top Section
 
 #contributions-top-section h2 {
   margin: 0;
-  font-family: $primaryFont;
+  font-family: $fontPrimary;
   text-transform: uppercase;
   font-size: 1.85em;
   letter-spacing: .075em;
@@ -43,7 +43,7 @@ Top Section
 
 #contributions-top-section > div > h4 {
   display: inline-block;
-  font-family: $primaryFont;
+  font-family: $fontPrimary;
   text-transform: uppercase;
   font-size: .9em;
   letter-spacing: .5em;
@@ -160,7 +160,7 @@ Bottom Section
   padding-right: 6.25em;
   width: 9em;
   height: 3.5em;
-  font-family: $primaryFontCondensed;
+  font-family: $fontPrimaryCondensed;
   font-size: 1em;
   font-weight: 700;
 }
@@ -184,7 +184,7 @@ Bottom Section
 
 #contribute-button button {
   background-color: red;
-  font-family: $primaryFontCondensed;
+  font-family: $fontPrimaryCondensed;
   font-size: 1.25em;
   font-weight: 700;
   height: 4em;
@@ -277,7 +277,7 @@ Bottom Section
 
 #contribution-form-right h2 {
   margin: 0;
-  font-family: $primaryFontCondensed;
+  font-family: $fontPrimaryCondensed;
   font-size: 2em;
 
 }

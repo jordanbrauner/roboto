@@ -1,6 +1,7 @@
 /*****************************
 Fonts
 *****************************/
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,400i,600,700,700i";
 /*****************************
 Mixins
 *****************************/
@@ -42,15 +43,14 @@ NAV
   .notice-bar__p {
     margin: 0;
     font: normal normal normal 0.85em "Open Sans", sans-serif; }
-  .notice-bar__p--light {
-    color: white; }
   .notice-bar__p--dark {
     color: #666666; }
   .notice-bar__latest {
     display: flex;
     align-items: center;
     width: 100%;
-    padding-left: 4em; }
+    font-size: 1em;
+    padding-left: 48px; }
   .notice-bar__account {
     width: 20em;
     display: flex;
@@ -92,8 +92,7 @@ NAV
   .nav-options-container__p {
     margin-left: 1em;
     padding-left: 1em;
-    font-size: .7em;
-    letter-spacing: .125em;
+    font-size: .8em;
     font-weight: 700; }
 
 /**************************************************

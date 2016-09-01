@@ -19,25 +19,25 @@ button {
   padding: 0;
 }
 
-#show-width-limit, #index-width-limit {
-  margin: 0 auto;
-  max-width: 1300px;
-}
-
-#contributions-width-limit.ng-scope {
-  max-width: 1300px;
-}
-
-#about-width-limit {
-  max-width: 1300px;
-}
-
-#more-width-limit.ng-scope {
-  max-width: 1300px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-}
+// #show-width-limit, #index-width-limit {
+//   margin: 0 auto;
+//   max-width: 1300px;
+// }
+//
+// #contributions-width-limit.ng-scope {
+//   max-width: 1300px;
+// }
+//
+// #about-width-limit {
+//   max-width: 1300px;
+// }
+//
+// #more-width-limit.ng-scope {
+//   max-width: 1300px;
+//   width: 100%;
+//   margin: 0 auto;
+//   padding: 0;
+// }
 
 .nav-bar-push {
   width: 100%;
@@ -45,8 +45,66 @@ button {
 }
 
 /**************************************************
+Structure
+**************************************************/
+
+// Rows
+.row-custom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.row-custom--align-center {
+  align-items: center;
+}
+
+// Rules
+.horizontal-rule {
+  margin: 1.25em 0;
+  width: 100%;
+}
+
+.horizontal-rule--thin {
+  border-bottom: 1px solid $colorLightGray;
+}
+
+.horizontal-rule--normal {
+  border-bottom: 1px solid black;
+}
+
+.vertical-rule {
+  height: 100%;
+}
+
+.vertical-rule--thin {
+  border-right: 1px solid $colorLightGray;
+}
+
+.vertical-rule--normal {
+  border-right: 1px solid black;
+}
+
+.vertical-rule--robot-overview {
+  height: 50px;
+}
+
+/**************************************************
 Main Fonts
 **************************************************/
+
+.font--m {
+  font-family: $fontPrimary;
+}
+
+.font--mc {
+  font-family: $fontPrimaryCondensed;
+}
+
+.font-color--r {
+  color: white;
+}
 
 .link, .link:visited, .link:active {
   text-decoration: none;
@@ -75,8 +133,18 @@ Main Fonts
   color: white;
 }
 
-.robot-subtitle-1, .robot-subtitle-2 {
+.section-header {
   font-size: .9em;
   font-weight: 600;
   text-transform: uppercase;
+  padding-bottom: .5em;
+  margin-bottom: 1.5em;
+}
+
+.section-header--primary {
+  border-bottom: 3px solid black;
+}
+
+.section-header--secondary {
+  border-bottom: 1px solid black;
 }

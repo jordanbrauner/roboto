@@ -1,6 +1,7 @@
 /*****************************
 Fonts
 *****************************/
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,400i,600,700,700i";
 /*****************************
 Mixins
 *****************************/
@@ -22,29 +23,56 @@ button {
   margin: 0;
   padding: 0; }
 
-#show-width-limit, #index-width-limit {
-  margin: 0 auto;
-  max-width: 1300px; }
-
-#contributions-width-limit.ng-scope {
-  max-width: 1300px; }
-
-#about-width-limit {
-  max-width: 1300px; }
-
-#more-width-limit.ng-scope {
-  max-width: 1300px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0; }
-
 .nav-bar-push {
   width: 100%;
   height: 8.5em; }
 
 /**************************************************
+Structure
+**************************************************/
+.row-custom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; }
+
+.row-custom--align-center {
+  align-items: center; }
+
+.horizontal-rule {
+  margin: 1.25em 0;
+  width: 100%; }
+
+.horizontal-rule--thin {
+  border-bottom: 1px solid #AAAAAA; }
+
+.horizontal-rule--normal {
+  border-bottom: 1px solid black; }
+
+.vertical-rule {
+  height: 100%; }
+
+.vertical-rule--thin {
+  border-right: 1px solid #AAAAAA; }
+
+.vertical-rule--normal {
+  border-right: 1px solid black; }
+
+.vertical-rule--robot-overview {
+  height: 50px; }
+
+/**************************************************
 Main Fonts
 **************************************************/
+.font--m {
+  font-family: "Open Sans", sans-serif; }
+
+.font--mc {
+  font-family: "Open Sans Condensed", sans-serif; }
+
+.font-color--r {
+  color: white; }
+
 .link, .link:visited, .link:active {
   text-decoration: none;
   transition: color 0.2s ease;
@@ -66,9 +94,17 @@ Main Fonts
 .link--hover-white:hover {
   color: white; }
 
-.robot-subtitle-1, .robot-subtitle-2 {
+.section-header {
   font-size: .9em;
   font-weight: 600;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding-bottom: .5em;
+  margin-bottom: 1.5em; }
+
+.section-header--primary {
+  border-bottom: 3px solid black; }
+
+.section-header--secondary {
+  border-bottom: 1px solid black; }
 
 /*# sourceMappingURL=core-styles.css.map */

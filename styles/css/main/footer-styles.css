@@ -1,6 +1,7 @@
 /*****************************
 Fonts
 *****************************/
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,400i,600,700,700i";
 /*****************************
 Mixins
 *****************************/
@@ -67,7 +68,8 @@ FOOTER
     text-align: center; }
 
 .link--footer, .link--footer:visited, .link--footer:active, .link--footer:hover {
-  font-size: .9em;
+  font-size: .8em;
+  font-weight: 600;
   color: #808080;
   text-decoration: none; }
 

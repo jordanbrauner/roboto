@@ -1,6 +1,7 @@
 /*****************************
 Fonts
 *****************************/
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,400i,600,700,700i";
 /*****************************
 Mixins
 *****************************/
@@ -13,8 +14,6 @@ Variables
     max-width: 1300px;
     margin: 0 auto;
   }*/
-  /* SHOW STYLES */
-  #jumbo-image {
-    height: 50em; } }
+  /* SHOW STYLES */ }
 
 /*# sourceMappingURL=media-queries.css.map */

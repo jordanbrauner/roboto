@@ -2,17 +2,35 @@
 Fonts
 *****************************/
 
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,400i,600,700,700i';
+
 /*****************************
 Mixins
 *****************************/
+@mixin layoutPadding($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin layoutMargin($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
 
 /*****************************
 Variables
 *****************************/
 // Colors
-$colorMediumGray: #666666;
 $colorPrimary: #262626;
+$colorMediumGray: #666666;
+$colorLightGray: #AAAAAA;
+$colorAccent: #da4e34;
 
 // Fonts
-$primaryFont: 'Open Sans', sans-serif;
-$primaryFontCondensed: 'Open Sans Condensed', sans-serif;
+$fontPrimary: 'Open Sans', sans-serif;
+$fontPrimaryCondensed: 'Open Sans Condensed', sans-serif;
+
+// Layout
+$layoutMargin: 52px;
+// $marginMain: 4em;
+// $paddingMain: 4em;
