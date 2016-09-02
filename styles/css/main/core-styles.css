@@ -19,21 +19,6 @@ body {
   min-width: 950px;
   min-height: 50em; }
 
-.btn {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.9em;
-  font-weight: 600;
-  letter-spacing: .0125em;
-  text-transform: uppercase;
-  transition: all 0.2s ease;
-  border-radius: 0; }
-  .btn:hover {
-    cursor: pointer; }
-
 .angular-view.ng-scope {
   width: 100%;
   display: flex;
@@ -129,14 +114,10 @@ Fonts
 .font-color--r {
   color: white; }
 
-.link, .link:visited, .link:active {
+.link, .link:visited, .link:active, .link:focus, .link:hover {
   text-decoration: none;
-  transition: color 0.2s ease;
-  margin: 0; }
-
-.link:hover {
-  text-decoration: none;
-  cursor: pointer; }
+  margin: 0;
+  color: black; }
 
 .link--dark {
   color: black; }
@@ -145,13 +126,28 @@ Fonts
   color: white; }
 
 .link--hover-red:hover {
-  color: red; }
+  color: #d6371a; }
 
 .link--hover-black:hover {
   color: black; }
 
 .link--hover-white:hover {
   color: white; }
+
+.btn {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: .0125em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border-radius: 0; }
+  .btn:hover {
+    cursor: pointer; }
 
 .section-header {
   font-family: "Open Sans", sans-serif;

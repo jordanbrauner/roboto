@@ -14,24 +14,6 @@ body {
   min-height: 50em;
 }
 
-.btn {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: $fontPrimary;
-  font-size: $fontSizeMainBody;
-  font-weight: 600;
-  letter-spacing: .0125em;
-  text-transform: uppercase;
-  transition: all 0.2s ease;
-  border-radius: 0;
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
 .angular-view.ng-scope {
   width: 100%;
   display: flex;
@@ -146,23 +128,36 @@ Fonts
   color: white;
 }
 
-.link, .link:visited, .link:active {
+.link, .link:visited, .link:active, .link:focus, .link:hover {
   text-decoration: none;
-  transition: color 0.2s ease;
   margin: 0;
-}
-
-.link:hover {
-  text-decoration: none;
-  cursor: pointer;
+  color: black;
 }
 
 .link--dark { color: black; }
 .link--light { color: white; }
 
-.link--hover-red:hover { color: red; }
+.link--hover-red:hover { color: $colorAccent; }
 .link--hover-black:hover { color: black; }
 .link--hover-white:hover { color: white; }
+
+.btn {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontPrimary;
+  font-size: $fontSizeMainBody;
+  font-weight: 600;
+  letter-spacing: .0125em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border-radius: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
 
 .section-header {
   font-family: $fontPrimary;

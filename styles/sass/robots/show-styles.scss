@@ -173,7 +173,9 @@ ROBOT BODY CONTAINER
 /* Content Container */
 .robot-body {
   margin: 2em $layoutMargin 5em $layoutMargin;
+  padding-top: 1em;
   display: flex;
+  align-items: flex-start;
 }
 
 /*************************
@@ -183,14 +185,13 @@ Main column
 .robot-body__main-col{
   width: 55%;
   margin-right: 5%;
-  margin-top: 3em;
 }
 
 /* Bio and Gallery */
 .robot-body__bio {
   font-size: .9em;
   line-height: 1.75em;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 /*************************
@@ -199,7 +200,6 @@ Side-bar
 
 .robot-body__sidebar {
   width: 35%;
-  margin-top: 1em;
   padding: 0 0 0 5%;
   box-sizing: content-box;
   border-left: .1em solid lightgray;
