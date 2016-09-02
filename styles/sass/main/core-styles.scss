@@ -118,15 +118,23 @@ Main Fonts
 }
 
 .font-size--body {
-  font-size: 0.8em;
+  font-size: $fontSizeMainBody;
   line-height: 1.5em;
   margin-bottom: 0.5em;
 }
 
 .font-size--sidebar {
-  font-size: 0.8em;
+  font-size: $fontSizeSidebarBody;
   line-height: 1.5em;
   margin-bottom: 0.25em;
+}
+
+.font-size--accent-lg {
+  font-size: $fontSizeAccentLarge;
+}
+
+.font-size--accent-xl {
+  font-size: $fontSizeAccentXL;
 }
 
 .font-color--r {
@@ -162,7 +170,7 @@ Main Fonts
 
 .section-header {
   font-family: $fontPrimary;
-  font-size: .8em;
+  font-size: $fontSizeSidebarHeading;
   font-weight: 700;
   text-transform: uppercase;
 }

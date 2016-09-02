@@ -41,8 +41,15 @@
       });
     });
 
+    vm.contributions.new = new ContributionFactory();
+
     vm.contributions.create = function() {
-      console.log("creating!");
+      this.contributions.new.$save(function(res) {
+        for (var i in res) {
+          console.log("Responses: " + res[i]);
+        }
+        $state.go("robotIndex", {}, {reload: true});
+      });
     };
 
   }

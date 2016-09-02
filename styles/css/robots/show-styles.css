@@ -107,7 +107,6 @@ ROBOT NAME AND TAGLINE
 
 .robot-heading__name {
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 2.8em;
   font-weight: 600;
   letter-spacing: .05em;
   color: white;
@@ -155,7 +154,7 @@ Main column
 
 /* Bio and Gallery */
 .robot-body__bio {
-  font-size: .85em;
+  font-size: .9em;
   line-height: 1.75em;
   margin-bottom: 2em; }
 
@@ -196,19 +195,17 @@ Side-bar
 
 .statistics__number {
   position: relative;
-  left: .63em;
+  left: .61em;
   display: flex;
   align-self: center;
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 700;
-  font-size: 2.25em;
   transition: color 0.2s ease; }
 
 .statistics__name {
   padding-top: .75em;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  font-size: .75em;
   color: #808080;
   text-transform: uppercase;
   transition: color 0.2s ease; }
@@ -244,12 +241,5 @@ Side-bar
 
 .robot-body__pilots-container {
   width: 45%; }
-
-.robot-body__pilots-container div {
-  margin-bottom: 1em; }
-
-.robot-body__pilots-container div p {
-  margin-bottom: .3em;
-  font-size: .85em; }
 
 /*# sourceMappingURL=show-styles.css.map */

@@ -24,10 +24,10 @@
     <div id="top-contributions">
       <p class="contributions-subtitle">// TOP CONTRIBUTIONS</p>
       <ul>
-        <div data-ng-repeat="contributor in RobotShowViewModel.contributions | orderBy:'contributor.amount'" class="contributors">
+        <div data-ng-repeat="contributor in RobotShowViewModel.contributions | orderBy:'-amount'" class="contributors">
           <li>
             <p>{{contributor.name}}</p>
-            <p><span>{{contributor.amount | currency : $ : 2}}</span></p>
+            <p><span>{{contributor.amount | currency : $ : 0}}</span></p>
           </li>
         </div>
       </ul>
@@ -40,7 +40,7 @@
         <div data-ng-repeat="contributor in RobotShowViewModel.contributions | orderBy:'created_at'" class="contributors">
           <li>
             <p>{{contributor.name}}</p>
-            <p><span>{{contributor.amount | currency : $ : 2}}</span></p>
+            <p><span>{{contributor.amount | currency : $ : 0}}</span></p>
           </li>
         </div>
       </ul>
