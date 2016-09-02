@@ -1,0 +1,141 @@
+@import "import-styles.scss";
+
+/**************************************************
+Structure
+**************************************************/
+
+// Rows
+.row-custom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.row-custom--just-center { justify-content: space-between; }
+.row-custom--align-center { align-items: center; }
+
+/**************************************************
+Common design elements
+**************************************************/
+
+// Buttons
+.btn {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontPrimary;
+  font-size: $fontSizeMainBody;
+  font-weight: 600;
+  letter-spacing: .0125em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border-radius: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Rules
+.horizontal-rule { margin: 1.25em 0; width: 100%; }
+.horizontal-rule--thin { border-bottom: 1px solid $colorLightGray; }
+.horizontal-rule--normal { border-bottom: 1px solid black; }
+
+.vertical-rule { height: 100%; }
+.vertical-rule--thin { border-right: 1px solid $colorLightGray; }
+.vertical-rule--normal { border-right: 1px solid black; }
+.vertical-rule--robot-overview { height: 50px; }
+
+.section-background--light { background-color: $colorBackgroundLight; }
+
+/**************************************************
+Section elements
+**************************************************/
+
+// As seen at the top of the robots#index page
+.title-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3em;
+
+  &__title {
+    text-align: center;
+    font-family: $fontPrimaryCondensed;
+    font-size: 5em;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+  }
+  &__title--dark { color: black; }
+  &__title--light { color: white; }
+
+  &__subtitle-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-left: 6em;
+    padding-right: 6em;
+  }
+
+  &__subtitle {
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: .6em;
+    min-width: 35em;
+    padding: 0 2em;
+  }
+  &__subtitle--dark { color: black; }
+  &__subtitle--light { color: white; }
+
+  &__title-rule {
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  &__title-rule--dark { border-bottom: 1px solid black; }
+  &__title-rule--light { border-bottom: 1px solid white; }
+}
+
+// Section Headers
+.section-header {
+  font-family: $fontPrimary;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-header--primary {
+  font-size: $fontSizeSidebarHeader;
+  padding-bottom: .5em;
+  margin-bottom: 1.5em;
+  border-bottom: 3px solid black;
+}
+
+.section-header--secondary {
+  font-size: $fontSizeSidebarHeader;
+  padding-bottom: .5em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid black;
+}
+
+.section-header--stylized {
+  font-family: $fontPrimary;
+  font-size: $fontSizeSidebarBody;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  font-weight: 200;
+  margin: 0;
+}
+
+.section-header--main-white {
+  font-size: $fontSizeMainHeader;
+  padding-bottom: .7em;
+  margin-bottom: 1.5em;
+  border-bottom: 2px solid white;
+}
+
+.section-header--no-rule { margin-bottom: 0.75em; }

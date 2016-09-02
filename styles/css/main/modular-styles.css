@@ -1,0 +1,150 @@
+/*****************************
+Fonts
+*****************************/
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,400i,600,700,700i";
+/*****************************
+Mixins
+*****************************/
+/*****************************
+Variables
+*****************************/
+/**************************************************
+Structure
+**************************************************/
+.row-custom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+
+.row-custom--just-center {
+  justify-content: space-between; }
+
+.row-custom--align-center {
+  align-items: center; }
+
+/**************************************************
+Common design elements
+**************************************************/
+.btn {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: .0125em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border-radius: 0; }
+  .btn:hover {
+    cursor: pointer; }
+
+.horizontal-rule {
+  margin: 1.25em 0;
+  width: 100%; }
+
+.horizontal-rule--thin {
+  border-bottom: 1px solid #AAAAAA; }
+
+.horizontal-rule--normal {
+  border-bottom: 1px solid black; }
+
+.vertical-rule {
+  height: 100%; }
+
+.vertical-rule--thin {
+  border-right: 1px solid #AAAAAA; }
+
+.vertical-rule--normal {
+  border-right: 1px solid black; }
+
+.vertical-rule--robot-overview {
+  height: 50px; }
+
+.section-background--light {
+  background-color: #EEEEEE; }
+
+/**************************************************
+Section elements
+**************************************************/
+.title-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3em; }
+  .title-container__title {
+    text-align: center;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 5em;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    text-transform: uppercase; }
+  .title-container__title--dark {
+    color: black; }
+  .title-container__title--light {
+    color: white; }
+  .title-container__subtitle-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-left: 6em;
+    padding-right: 6em; }
+  .title-container__subtitle {
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: .6em;
+    min-width: 35em;
+    padding: 0 2em; }
+  .title-container__subtitle--dark {
+    color: black; }
+  .title-container__subtitle--light {
+    color: white; }
+  .title-container__title-rule {
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin-bottom: 1em; }
+  .title-container__title-rule--dark {
+    border-bottom: 1px solid black; }
+  .title-container__title-rule--light {
+    border-bottom: 1px solid white; }
+
+.section-header {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.section-header--primary {
+  font-size: 0.9em;
+  padding-bottom: .5em;
+  margin-bottom: 1.5em;
+  border-bottom: 3px solid black; }
+
+.section-header--secondary {
+  font-size: 0.9em;
+  padding-bottom: .5em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid black; }
+
+.section-header--stylized {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.825em;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  font-weight: 200;
+  margin: 0; }
+
+.section-header--main-white {
+  font-size: 0.975em;
+  padding-bottom: .7em;
+  margin-bottom: 1.5em;
+  border-bottom: 2px solid white; }
+
+.section-header--no-rule {
+  margin-bottom: 0.75em; }
+
+/*# sourceMappingURL=modular-styles.css.map */

@@ -1,0 +1,39 @@
+@import "import-styles.scss";
+
+/**************************************************
+Fonts
+**************************************************/
+
+// Font families
+.font--m { font-family: $fontPrimary; }
+.font--mc { font-family: $fontPrimaryCondensed; }
+
+// Font Sizes
+.font-size--body {
+  font-size: $fontSizeMainBody;
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.font-size--sidebar {
+  font-size: $fontSizeSidebarBody;
+  line-height: 1.5em;
+  margin-bottom: 0.25em;
+}
+
+.font-size--accent-sm { font-size: $fontSizeAccentSmall; }
+.font-size--accent-lg { font-size: $fontSizeAccentLarge; }
+.font-size--accent-xl { font-size: $fontSizeAccentXL; }
+.font-color--r { color: white; }
+
+// Links
+.link, .link:visited, .link:active, .link:focus, .link:hover {
+  text-decoration: none;
+  margin: 0;
+  color: black;
+}
+.link--dark { color: black; }
+.link--light { color: white; }
+.link--hover-red:hover { color: $colorAccent; }
+.link--hover-black:hover { color: black; }
+.link--hover-white:hover { color: white; }

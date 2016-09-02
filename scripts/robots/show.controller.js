@@ -18,12 +18,12 @@
 
     // Variables: Core
     var vm = this,
-        contributing = false;
+        contributing = false,
+        campaignRunning = true;
 
     // Variables: Contribution
     vm.totalPledged = 0;
     vm.totalContributors = 0;
-    vm.daysLeft = 0;
     vm.robotsBuilt = 0;
 
     // Robot#Index
@@ -61,6 +61,13 @@
             campaignLimit = 30,
             ONE_DAY = 24 * 60 * 60 * 1000;
         daysLeft = campaignLimit - ( Math.floor(( now - created ) / ONE_DAY));
+
+        // Check if campaign has ended
+        if (daysLeft <= 0) {
+          daysLeft = 0;
+          campaignRunning = false;
+        }
+
         $("#days-left").text(daysLeft);
       });
     })();

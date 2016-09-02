@@ -1,20 +1,22 @@
-<div id="contribution-form-left">
-  <h2>How much will you contribute?</h2>
+<section class="form-container max-width-container">
 
-  <form data-ng-show="contributing">
-    <div>
-      <label>Name</label>
-      <input placeholder="Your Name / Corporation Name" data-ng-model="RobotShowViewModel.contributions.name">
-    </div>
-    <div>
-      <label>Amount</label>
-      <input placeholder="How much would you like to donate?" data-ng-model="RobotShowViewModel.contributions.amount">
-    </div>
+    <h2 class="section-header">How much will you pledge?</h2>
 
-    <button type="button" data-ng-click="RobotShowViewModel.contributions.create()">Contribute</button>
+    <form data-ng-show="contributing">
+      <div>
+        <label>Name</label>
+        <input placeholder="Your Name / Corporation Name" data-ng-model="RobotShowViewModel.contributions.name">
+      </div>
+      <div>
+        <label>Amount</label>
+        <input placeholder="How much would you like to donate?" data-ng-model="RobotShowViewModel.contributions.amount">
+      </div>
 
-  </form>
-</div>
+      <button type="button" data-ng-click="RobotShowViewModel.contributions.create()">Contribute</button>
+
+    </form>
+
+</section>
 
 <!-- <div id="contribution-form-right">
   <h4>{{RobotShowViewModel.robot.corporation}}'s Goal: </h4>
