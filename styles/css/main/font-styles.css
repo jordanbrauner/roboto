@@ -39,6 +39,18 @@ Fonts
 .font-color--r {
   color: white; }
 
+.font-color--dark {
+  color: white; }
+
+.font-color--medium-gray {
+  color: #666666; }
+
+.font-color--light-gray {
+  color: #808080; }
+
+.font-color--lighter-gray {
+  color: #AAAAAA; }
+
 .link, .link:visited, .link:active, .link:focus, .link:hover {
   text-decoration: none;
   margin: 0;
@@ -57,6 +69,42 @@ Fonts
   color: black; }
 
 .link--hover-white:hover {
+  color: white; }
+
+.section-header {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.section-header--primary {
+  font-size: 0.9em;
+  padding-bottom: .5em;
+  margin-bottom: 1.5em;
+  border-bottom: 3px solid black; }
+
+.section-header--secondary {
+  font-size: 0.9em;
+  padding-bottom: .5em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid black; }
+
+.section-header--stylized {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.825em;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  font-weight: 200;
+  margin: 0; }
+
+.section-header--no-rule {
+  font-size: 0.9em;
+  margin-bottom: 0.75em; }
+
+.section-header--main-white {
+  font-size: 0.975em;
+  padding-bottom: .7em;
+  margin-bottom: 1.5em;
+  border-bottom: 2px solid white;
   color: white; }
 
 /*# sourceMappingURL=font-styles.css.map */

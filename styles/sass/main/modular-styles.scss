@@ -11,7 +11,8 @@ Structure
   flex-direction: row;
   justify-content: flex-start;
 }
-.row-custom--just-center { justify-content: space-between; }
+.row-custom--just-between { justify-content: space-between; }
+.row-custom--just-center { justify-content: center; }
 .row-custom--align-center { align-items: center; }
 
 /**************************************************
@@ -34,6 +35,16 @@ Common design elements
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+.btn--white-border {
+  border: 1px solid white;
+  padding: 1em 3em;
+
+  &:hover {
+    border: 1px solid $colorAccent;
+    color: white;
   }
 }
 
@@ -100,42 +111,3 @@ Section elements
   &__title-rule--dark { border-bottom: 1px solid black; }
   &__title-rule--light { border-bottom: 1px solid white; }
 }
-
-// Section Headers
-.section-header {
-  font-family: $fontPrimary;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.section-header--primary {
-  font-size: $fontSizeSidebarHeader;
-  padding-bottom: .5em;
-  margin-bottom: 1.5em;
-  border-bottom: 3px solid black;
-}
-
-.section-header--secondary {
-  font-size: $fontSizeSidebarHeader;
-  padding-bottom: .5em;
-  margin-bottom: 1.5em;
-  border-bottom: 1px solid black;
-}
-
-.section-header--stylized {
-  font-family: $fontPrimary;
-  font-size: $fontSizeSidebarBody;
-  text-transform: uppercase;
-  letter-spacing: .5em;
-  font-weight: 200;
-  margin: 0;
-}
-
-.section-header--main-white {
-  font-size: $fontSizeMainHeader;
-  padding-bottom: .7em;
-  margin-bottom: 1.5em;
-  border-bottom: 2px solid white;
-}
-
-.section-header--no-rule { margin-bottom: 0.75em; }

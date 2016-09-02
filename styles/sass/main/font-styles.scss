@@ -25,6 +25,11 @@ Fonts
 .font-size--accent-lg { font-size: $fontSizeAccentLarge; }
 .font-size--accent-xl { font-size: $fontSizeAccentXL; }
 .font-color--r { color: white; }
+.font-color--dark { color: white; }
+.font-color--medium-gray { color: $colorMediumGray; }
+.font-color--light-gray { color: $colorLightGray; }
+.font-color--lighter-gray { color: $colorLighterGray; }
+
 
 // Links
 .link, .link:visited, .link:active, .link:focus, .link:hover {
@@ -37,3 +42,46 @@ Fonts
 .link--hover-red:hover { color: $colorAccent; }
 .link--hover-black:hover { color: black; }
 .link--hover-white:hover { color: white; }
+
+// Section Headers
+.section-header {
+  font-family: $fontPrimary;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-header--primary {
+  font-size: $fontSizeSidebarHeader;
+  padding-bottom: .5em;
+  margin-bottom: 1.5em;
+  border-bottom: 3px solid black;
+}
+
+.section-header--secondary {
+  font-size: $fontSizeSidebarHeader;
+  padding-bottom: .5em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid black;
+}
+
+.section-header--stylized {
+  font-family: $fontPrimary;
+  font-size: $fontSizeSidebarBody;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  font-weight: 200;
+  margin: 0;
+}
+
+.section-header--no-rule {
+  font-size: $fontSizeSidebarHeader;
+  margin-bottom: 0.75em;
+}
+
+.section-header--main-white {
+  font-size: $fontSizeMainHeader;
+  padding-bottom: .7em;
+  margin-bottom: 1.5em;
+  border-bottom: 2px solid white;
+  color: white;
+}
