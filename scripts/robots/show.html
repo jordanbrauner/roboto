@@ -17,7 +17,7 @@
       </div>
       <div class="vertical-rule vertical-rule--thin vertical-rule--robot-overview"></div>
       <div class="campaign-info__days-left campaign-info__col">
-        <h3 class="campaign-info__statistic .font--mc font-size--accent-lg">14</h3>
+        <h3 class="campaign-info__statistic .font--mc font-size--accent-lg" id="days-left"></h3>
         <p class="campaign-info__statistic-text font--m">Days left</p>
       </div>
       <div class="vertical-rule vertical-rule--thin vertical-rule--robot-overview"></div>
@@ -33,11 +33,11 @@
       <p class="campaign-info__statistic-text campaign-info__pledged-of font--m">pledged of {{RobotShowViewModel.robot.cGoal | currency : $ : 0}}</p>
     </div>
     <!-- Row 3 -->
-    <div class="campaign-info__btn font--m">Contribute Now</div>
+    <button class="btn campaign-info__btn">Contribute Now</button>
     <!-- Row 4 -->
     <div class="row-custom campaign-info__row">
       <div class="campaign-info__asterik font--m">*</div>
-      <div class="campaign-info__disclaimer font--m">Have you ever tried just turning off the TV, sitting down with your children, and hitting them? Bender?! You stole the atom. Oh, I think we should.</div>
+      <div class="campaign-info__disclaimer font--m font-size--accent-sm">Have you ever tried just turning off the TV, sitting down with your children, and hitting them? Bender?! You stole the atom. Oh, I think we should.</div>
       <div class="campaign-info__share font--m section-header">// SHARE</div>
     </div>
   </div>
@@ -47,7 +47,7 @@
 <div class="robot-heading-container section-background--light">
   <div class="robot-heading">
     <a class="link" data-ui-sref="robotEdit({id: RobotShowViewModel.robot.id })"><h3 class="robot-heading__name font-size--accent-xl">{{RobotShowViewModel.robot.name}}</h3></a>
-    <h4 class="robot-heading__tagline">{{RobotShowViewModel.robot.tagline}}</h4>
+    <h4 class="robot-heading__tagline section-header--stylized font-color--r">{{RobotShowViewModel.robot.tagline}}</h4>
   </div>
   <div class="robot-heading__arrow-container">
     <img class="robot-heading__arrow" src="/img/design-elements/box-arrow.png" />

@@ -58,20 +58,6 @@ ROBOT OVERVIEW (large image, funding overview)
     text-align: left;
   }
 
-  // Row 1 - Column 1 of 3
-  &__contributors {
-  }
-
-  // Row 1 - Column 2 of 3
-  &__days-left {
-
-  }
-
-  // Row 1 - Column 3 of 3
-  &__campaign {
-
-  }
-
   // Row 2
   &__pledged-container {
     display: flex;
@@ -90,19 +76,12 @@ ROBOT OVERVIEW (large image, funding overview)
     margin: 2em 0;
     width: 100%;
     height: 3.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: $colorAccent;
-    font-size: .85em;
-    font-weight: 600;
-    letter-spacing: .0125em;
     color: white;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
 
     &:hover {
       background-color: black;
+      color: white;
       cursor: pointer;
     }
 
@@ -118,23 +97,19 @@ ROBOT OVERVIEW (large image, funding overview)
     font-size: 1em;
     font-weight: 600;
     color: $colorLightGray;
-
   }
 
   // Row 4 - Column 2 of 3
   &__disclaimer {
     width: 45.5%;
     margin-right: 10%;
-    font-size: 0.6em;
     color: $colorLightGray;
-
   }
 
   // Row 4 - Column 3 of 3
   &__share {
     width: 40%;
   }
-
 }
 
 /*************************
@@ -161,19 +136,14 @@ ROBOT NAME AND TAGLINE
   font-weight: 600;
   letter-spacing: .05em;
   color: white;
-  margin-right: 1em;
-  margin-top: .25em;
+  margin: 0 1em 0 0;
   text-transform: uppercase;
 }
 
 .robot-heading__tagline {
-  font-weight: 400;
-  color: white;
-  margin-top: 1.5em;
-  text-transform: uppercase;
-  font-size: .75em;
-  font-weight: 200;
-  letter-spacing: .7em
+  position: relative;
+  top: 0.15em;
+  margin-top: 0;
 }
 
 .robot-heading__arrow-container {

@@ -14,9 +14,22 @@ body {
   min-height: 50em;
 }
 
-button {
-  margin: 0;
-  padding: 0;
+.btn {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontPrimary;
+  font-size: $fontSizeMainBody;
+  font-weight: 600;
+  letter-spacing: .0125em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border-radius: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .angular-view.ng-scope {
@@ -29,8 +42,7 @@ button {
 
 // Layout - Max-Width
 .max-width-container, #index-width-limit, #about-width-limit,
-#more-width-limit.ng-scope, #contributions-width-limit.ng-scope,
-.robot-overview.ng-scope {
+#more-width-limit.ng-scope, .robot-overview.ng-scope {
   align-self: center;
   max-width: $layoutMaxWidth;
 }
@@ -65,11 +77,6 @@ Structure
 .row-custom--align-center {
   align-items: center;
 }
-
-// .row-custom--just-left {
-//   justify-content: flex-start;
-//   align-items: center;
-// }
 
 // Rules
 .horizontal-rule {
@@ -106,7 +113,7 @@ Structure
 }
 
 /**************************************************
-Main Fonts
+Fonts
 **************************************************/
 
 .font--m {
@@ -127,6 +134,10 @@ Main Fonts
   font-size: $fontSizeSidebarBody;
   line-height: 1.5em;
   margin-bottom: 0.25em;
+}
+
+.font-size--accent-sm {
+  font-size: $fontSizeAccentSmall;
 }
 
 .font-size--accent-lg {
@@ -170,21 +181,38 @@ Main Fonts
 
 .section-header {
   font-family: $fontPrimary;
-  font-size: $fontSizeSidebarHeading;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .section-header--primary {
+  font-size: $fontSizeSidebarHeader;
   padding-bottom: .5em;
   margin-bottom: 1.5em;
   border-bottom: 3px solid black;
 }
 
 .section-header--secondary {
+  font-size: $fontSizeSidebarHeader;
   padding-bottom: .5em;
   margin-bottom: 1.5em;
   border-bottom: 1px solid black;
+}
+
+.section-header--stylized {
+  font-family: $fontPrimary;
+  font-size: $fontSizeSidebarBody;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  font-weight: 200;
+  margin: 0;
+}
+
+.section-header--main-white {
+  font-size: $fontSizeMainHeader;
+  padding-bottom: .7em;
+  margin-bottom: 1.5em;
+  border-bottom: 2px solid white;
 }
 
 .section-header--no-rule {

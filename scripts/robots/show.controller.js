@@ -52,6 +52,19 @@
       });
     };
 
+    // Days left
+    (function() {
+      RobotFactory.get({ id: $stateParams.id }, function(res) {
+        var created = Date.parse( new Date(res.created_at) ),
+            now = Date.parse( new Date(Date.now()) ),
+            daysLeft = "10",
+            campaignLimit = 30,
+            ONE_DAY = 24 * 60 * 60 * 1000;
+        daysLeft = campaignLimit - ( Math.floor(( now - created ) / ONE_DAY));
+        $("#days-left").text(daysLeft);
+      });
+    })();
+
   }
 
 })();

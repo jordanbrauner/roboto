@@ -62,19 +62,6 @@ form textarea {
   border: .1em solid #d7d7d7;
   padding: 1em; }
 
-button {
-  font-family: "Open Sans", sans-serif;
-  font-size: .75em;
-  text-transform: uppercase;
-  background-color: black;
-  color: white;
-  padding: 1.35em 3em 1.35em 3em;
-  margin: 2em 1em 0em 0em;
-  border: 0; }
-
-button:hover {
-  background-color: red; }
-
 #wra-rating {
   display: flex;
   justify-content: space-between;

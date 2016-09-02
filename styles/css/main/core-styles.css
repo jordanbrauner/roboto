@@ -19,9 +19,20 @@ body {
   min-width: 950px;
   min-height: 50em; }
 
-button {
-  margin: 0;
-  padding: 0; }
+.btn {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: .0125em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border-radius: 0; }
+  .btn:hover {
+    cursor: pointer; }
 
 .angular-view.ng-scope {
   width: 100%;
@@ -31,8 +42,7 @@ button {
   padding-top: 2em; }
 
 .max-width-container, #index-width-limit, #about-width-limit,
-#more-width-limit.ng-scope, #contributions-width-limit.ng-scope,
-.robot-overview.ng-scope {
+#more-width-limit.ng-scope, .robot-overview.ng-scope {
   align-self: center;
   max-width: 1150px; }
 
@@ -86,7 +96,7 @@ Structure
   background-color: #EEEEEE; }
 
 /**************************************************
-Main Fonts
+Fonts
 **************************************************/
 .font--m {
   font-family: "Open Sans", sans-serif; }
@@ -100,9 +110,12 @@ Main Fonts
   margin-bottom: 0.5em; }
 
 .font-size--sidebar {
-  font-size: 0.8em;
+  font-size: 0.825em;
   line-height: 1.5em;
   margin-bottom: 0.25em; }
+
+.font-size--accent-sm {
+  font-size: 0.65em; }
 
 .font-size--accent-lg {
   font-size: 2.25em; }
@@ -136,19 +149,34 @@ Main Fonts
 
 .section-header {
   font-family: "Open Sans", sans-serif;
-  font-size: 0.9em;
   font-weight: 700;
   text-transform: uppercase; }
 
 .section-header--primary {
+  font-size: 0.9em;
   padding-bottom: .5em;
   margin-bottom: 1.5em;
   border-bottom: 3px solid black; }
 
 .section-header--secondary {
+  font-size: 0.9em;
   padding-bottom: .5em;
   margin-bottom: 1.5em;
   border-bottom: 1px solid black; }
+
+.section-header--stylized {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.825em;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  font-weight: 200;
+  margin: 0; }
+
+.section-header--main-white {
+  font-size: 0.975em;
+  padding-bottom: .7em;
+  margin-bottom: 1.5em;
+  border-bottom: 2px solid white; }
 
 .section-header--no-rule {
   margin-bottom: 0.75em; }
