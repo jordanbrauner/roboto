@@ -1,29 +1,31 @@
+<section class="more-container max-width-container">
 
-<div id="more-width-limit">
-  <img src="img/design-elements/box-arrow.png" id="more-arrow" />
+  <img class="more-container__arrow" src="img/design-elements/box-arrow.png"/>
 
-  <div id="more-top">
-    <h2>More</h2>
-    <div id="more-title">
-      <div class="more-title-rule"></div>
-      <h4>Robots Worth Fighting For</h4>
-      <div class="more-title-rule"></div>
+  <div class="title-container__title-container">
+    <h2 class="title-container__title title-container__title--light">MORE</h2>
+    <div class="title-container__subtitle-container">
+      <div class="title-container__title-rule title-container__title-rule--light"></div>
+      <h4 class="title-container__subtitle title-container__subtitle--light">Robots Worth Fighting For</h4>
+      <div class="title-container__title-rule title-container__title-rule--light"></div>
     </div>
   </div>
 
-  <div id="more-middle">
+  <div class="more-container__robots">
     <div data-ng-repeat="robot in RobotShowViewModel.robots | limitTo:3">
-      <div class="robot more">
+      <div class="robot--more">
         <a class="link" data-ui-sref="robotShow({id: robot.id})">
-          <div class="robot-image" data-ng-style="{'background-image': 'url(' + robot.photoUrl + ')'}"></div>
-          <h3>{{robot.name}}</h3>
+          <div class="robot__image" data-ng-style="{'background-image': 'url(' + robot.photoUrl + ')'}"></div>
+          <h3 class="robot__name robot__name--light">{{robot.name}}</h3>
         </a>
       </div>
     </div>
   </div>
 
-  <div id="more-bottom">
-    <a class="link" data-ui-sref="robotIndex"><button>Warehouse</button></a>
+  <div class="more-container__button-container">
+    <a class="link link--light" data-ui-sref="robotIndex">
+      <button class="btn more-container__btn">Warehouse</button>
+    </a>
   </div>
 
-</div>
+</section>

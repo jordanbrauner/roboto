@@ -61,6 +61,8 @@ ROBOT OVERVIEW (large image, funding overview)
     height: 3.5em;
     background-color: #d6371a;
     color: white; }
+    .campaign-info__btn:focus {
+      color: white; }
     .campaign-info__btn:hover {
       background-color: black;
       color: white;

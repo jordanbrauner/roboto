@@ -79,6 +79,10 @@ ROBOT OVERVIEW (large image, funding overview)
     background-color: $colorAccent;
     color: white;
 
+    &:focus {
+      color: white;
+    }
+
     &:hover {
       background-color: black;
       color: white;

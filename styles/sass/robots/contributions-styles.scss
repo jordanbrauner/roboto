@@ -136,6 +136,7 @@ Contributions call-to-action
     padding: 1em 3em;
     border: 1px solid white;
 
+    &:focus { color: white; }
     &:hover {
       color: white;
       border: 1px solid $colorAccent;
@@ -148,6 +149,7 @@ Contributions call-to-action
     padding: 1.75em 5em;
     background-color: $colorAccent;
 
+    &:focus { color: white; }
     &:hover {
       background-color: red;
       color: white;

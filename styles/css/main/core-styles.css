@@ -138,6 +138,9 @@ Fonts
 .link--dark {
   color: black; }
 
+.link--light {
+  color: white; }
+
 .link--hover-red:hover {
   color: red; }
 
@@ -180,5 +183,52 @@ Fonts
 
 .section-header--no-rule {
   margin-bottom: 0.75em; }
+
+/**************************************************
+Styled sections
+**************************************************/
+.title-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3em; }
+  .title-container__title {
+    text-align: center;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 5em;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    text-transform: uppercase; }
+  .title-container__title--dark {
+    color: black; }
+  .title-container__title--light {
+    color: white; }
+  .title-container__subtitle-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-left: 6em;
+    padding-right: 6em; }
+  .title-container__subtitle {
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: .6em;
+    min-width: 35em;
+    padding: 0 2em; }
+  .title-container__subtitle--dark {
+    color: black; }
+  .title-container__subtitle--light {
+    color: white; }
+  .title-container__title-rule {
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin-bottom: 1em; }
+  .title-container__title-rule--dark {
+    border-bottom: 1px solid black; }
+  .title-container__title-rule--light {
+    border-bottom: 1px solid white; }
 
 /*# sourceMappingURL=core-styles.css.map */

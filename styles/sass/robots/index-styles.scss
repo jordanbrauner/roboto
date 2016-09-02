@@ -17,49 +17,6 @@ Index Styles
   padding-bottom: 10em;
 }
 
-.warehouse__title-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 3em;
-}
-
-.warehouse__title {
-  text-align: center;
-  color: black;
-  font-family: $fontPrimaryCondensed;
-  font-size: 5em;
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  text-transform: uppercase;
-}
-
-.warehouse__subtitle-container {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  padding-left: 6em;
-  padding-right: 6em;
-}
-
-.warehouse__subtitle {
-  box-sizing: border-box;
-  text-align: center;
-  color: black;
-  text-transform: uppercase;
-  font-size: .9em;
-  letter-spacing: .6em;
-  min-width: 35em;
-  padding: 0 2em;
-}
-
-.warehouse__title-rule {
-  border-bottom: 1px solid black;
-  width: 100%;
-  margin-bottom: 1em;
-}
-
 /* Robot cards */
 .robot {
   margin: 0em 0.5em 0em 0.5em;
