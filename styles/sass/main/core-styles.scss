@@ -71,6 +71,10 @@ Structure
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+}
+
+.row-custom--just-center {
   justify-content: space-between;
 }
 

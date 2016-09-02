@@ -158,6 +158,9 @@ Side-bar
   border-left: .1em solid lightgray; }
 
 /* Corporations */
+.corporation__col {
+  margin-right: 4em; }
+
 /* Statistics */
 .robot-body__statistics-container {
   margin-top: 4.25em; }
@@ -173,11 +176,11 @@ Side-bar
   max-width: 4em;
   min-height: 4em;
   max-height: 4em;
-  border: 1.5px solid black;
+  margin-right: 1.5em;
+  border: 1px solid #666666;
   border-radius: 360px;
   text-align: center;
   transition: border 0.25s ease;
-  margin-right: 1em;
   text-align: center; }
   .statistics__circle:hover {
     cursor: default; }
