@@ -1,4 +1,4 @@
-<!-- <div id="contribution-form-left">
+<div id="contribution-form-left">
   <h2>How much will you contribute?</h2>
 
   <form data-ng-show="contributing">
@@ -7,14 +7,16 @@
       <input placeholder="Your Name / Corporation Name" data-ng-model="RobotShowViewModel.robot.contributions.name">
     </div>
     <div>
-      <label>Tagline</label>
+      <label>Amount</label>
       <input placeholder="How much would you like to donate?" data-ng-model="RobotShowViewModel.robot.contributions.amount">
     </div>
-    <button data-ng-click="contributing = !contributing">Contribute</button>
+
+    <button type="button" data-ng-click="RobotShowViewModel.contributions.create()">Contribute</button>
+
   </form>
 </div>
 
-<div id="contribution-form-right">
+<!-- <div id="contribution-form-right">
   <h4>{{RobotShowViewModel.robot.corporation}}'s Goal: </h4>
   <h2>{{RobotShowViewModel.robot.cGoal}}</h2>
 </div> -->

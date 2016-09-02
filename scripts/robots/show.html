@@ -12,7 +12,7 @@
     <!-- Row 1 -->
     <div class="row-custom row-custom--align-center campaign-info__row campaign-info__row--padded">
       <div class="campaign-info__contributors campaign-info__col">
-        <h3 class="campaign-info__statistic .font--mc">392</h3>
+        <h3 class="campaign-info__statistic .font--mc">{{RobotShowViewModel.totalContributors}}</h3>
         <p class="campaign-info__statistic-text font--m">Contributors</p>
       </div>
       <div class="vertical-rule vertical-rule--thin vertical-rule--robot-overview"></div>
@@ -29,8 +29,8 @@
     <div class="horizontal-rule horizontal-rule--thin"></div>
     <!-- Row 2 -->
     <div class="campaign-info__pledged-container">
-      <h3 class="campaign-info__statistic .font--mc">{{RobotShowViewModel.robot.cGoal | currency : $ : 0}}&nbsp;</h3>
-      <p class="campaign-info__statistic-text campaign-info__pledged-of font--m">pledged of $1,250,000</p>
+      <h3 class="campaign-info__statistic .font--mc">{{RobotShowViewModel.totalPledged | currency : $ : 0}}&nbsp;</h3>
+      <p class="campaign-info__statistic-text campaign-info__pledged-of font--m">pledged of {{RobotShowViewModel.robot.cGoal | currency : $ : 0}}</p>
     </div>
     <!-- Row 3 -->
     <div class="campaign-info__btn font--m">Contribute Now</div>
@@ -162,4 +162,4 @@
 <div class="contributions-container" data-ng-include="'/scripts/robots/contributions/_contributions.html'"></div>
 
 <!-- More Container -->
-<!-- <div id="more-container" data-ng-include="'/scripts/robots/partials/_more.html'"></div> -->
+<div id="more-container" data-ng-include="'/scripts/robots/partials/_more.html'"></div>

@@ -16,18 +16,34 @@
     // Scroll to top of page on state change
     $("html, body").animate({ scrollTop: 0 }, 200);
 
+    // Variables: Core
     var vm = this,
         contributing = false;
 
+    // Variables: Contribution
+    vm.totalPledged = 0;
+    vm.totalContributors = 0;
+    vm.daysLeft = 0;
+    vm.robotsBuilt = 0;
+
+    // Robot#Index
     vm.robots = RobotFactory.query();
 
+    // Robot#Show
     vm.robot = RobotFactory.get({ id: $stateParams.id });
 
+    // Contribution#Index and calculate contribution variables
     vm.contributions = ContributionFactory.query({ id: $stateParams.id }, function(res) {
       vm.contributions.forEach(function(contribution) {
-        contribution.amount = parseFloat(contribution.amount).toFixed(2);
+        contribution.amount = parseFloat(contribution.amount);
+        vm.totalPledged += parseFloat(contribution.amount);
+        vm.totalContributors++;
       });
     });
+
+    vm.contributions.create = function() {
+      console.log("creating!");
+    };
 
   }
 

@@ -5,7 +5,7 @@ ROBOT OVERVIEW (large image, funding overview)
 *************************/
 
 .robot-overview {
-  margin: 2em $layoutMargin 2em $layoutMargin;
+  margin: 0 $layoutMargin 2em $layoutMargin;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -87,14 +87,14 @@ ROBOT OVERVIEW (large image, funding overview)
 
   // Row 3
   &__btn {
-    margin: 1.75em 0;
+    margin: 2em 0;
     width: 100%;
-    height: 4em;
+    height: 3.5em;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $colorAccent;
-    font-size: 1em;
+    font-size: .85em;
     font-weight: 600;
     letter-spacing: .0125em;
     color: white;
@@ -228,6 +228,7 @@ Side-bar
   width: 35%;
   margin-top: 1em;
   padding: 0 0 0 5%;
+  box-sizing: content-box;
   border-left: .1em solid lightgray;
 }
 
@@ -267,13 +268,13 @@ Side-bar
 
 .statistics__number {
   position: relative;
-  left: .6125em;
+  left: .63em;
   display: flex;
   align-self: center;
   font-family: $fontPrimaryCondensed;
   font-weight: 700;
   font-size: 2.25em;
-  transition: color 0.25s ease;
+  transition: color 0.2s ease;
 }
 
 .statistics__name {
@@ -283,7 +284,7 @@ Side-bar
   font-size: .75em;
   color: #808080;
   text-transform: uppercase;
-  transition: color 0.25s ease;
+  transition: color 0.2s ease;
 }
 
 /* Hover effects */

@@ -27,13 +27,14 @@ button {
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-top: 2em; }
 
 .max-width-container, #index-width-limit, #about-width-limit,
 #more-width-limit.ng-scope, #contributions-width-limit.ng-scope,
 .robot-overview.ng-scope {
   align-self: center;
-  max-width: 1200px; }
+  max-width: 1150px; }
 
 #show-width-limit, #index-width-limit {
   margin: 0 auto; }
