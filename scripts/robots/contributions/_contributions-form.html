@@ -4,15 +4,15 @@
 
   <div>
     <label class="font--m font-size--sidebar">Name</label>
-    <input class="" placeholder="Your Name / Corporation Name" data-ng-model="RobotShowViewModel.contributions.name">
+    <input class="" placeholder="Your Name / Corporation Name" data-ng-model="RobotShowViewModel.newContribution.name">
   </div>
   <div>
     <label class="font--m font-size--sidebar">Amount</label>
-    <input class="" placeholder="How much would you like to donate?" data-ng-model="RobotShowViewModel.contributions.amount">
+    <input class="" placeholder="How much would you like to donate?" data-ng-model="RobotShowViewModel.newContribution.amount">
   </div>
 
   <div class="row-custom row-custom--just-center">
-    <button class="btn btn--white-border" type="button" data-ng-click="RobotShowViewModel.contributions.create()">Pledge</button>
+    <button class="btn btn--white-border" type="button" data-ng-click="RobotShowViewModel.createContribution()">Pledge</button>
   </div>
 
 </form>

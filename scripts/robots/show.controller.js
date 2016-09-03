@@ -6,12 +6,13 @@
     .controller("RobotShowController", [
       "RobotFactory",
       "ContributionFactory",
+      "$state",
       "$resource",
       "$stateParams",
       ControllerFunction
     ]);
 
-  function ControllerFunction(RobotFactory, ContributionFactory, $resource, $stateParams) {
+  function ControllerFunction(RobotFactory, ContributionFactory, $state, $resource, $stateParams) {
 
     // Scroll to top of page on state change
     $("html, body").animate({ scrollTop: 0 }, 200);
@@ -41,14 +42,11 @@
       });
     });
 
-    vm.contributions.new = new ContributionFactory();
-
-    vm.contributions.create = function() {
-      this.contributions.new.$save(function(res) {
-        for (var i in res) {
-          console.log("Responses: " + res[i]);
-        }
-        $state.go("robotIndex", {}, {reload: true});
+    // Contribution#New
+    vm.newContribution = new ContributionFactory();
+    vm.createContribution = function() {
+      this.newContribution.$save({ id: $stateParams.id }, function(res) {
+        $state.go("robotShow", { id: $stateParams.id }, {reload: true});
       });
     };
 

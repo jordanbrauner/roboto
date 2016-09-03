@@ -21,7 +21,7 @@
     <!-- Contributions: Top Contribtions -->
     <div class="contribution-lists__list-container contribution-lists__top">
       <p class="section-header section-header--main-white">// TOP CONTRIBUTIONS</p>
-      <div class="contribution-lists__row" data-ng-repeat="contributor in RobotShowViewModel.contributions | orderBy:'-amount'" class="contributors">
+      <div class="contribution-lists__row" data-ng-repeat="contributor in RobotShowViewModel.contributions | orderBy:'-amount' | limitTo: 8" class="contributors">
           <p class="font--m font-size--body contribution-lists__text">{{contributor.name}}</p>
           <p class="font--m font-size--body contribution-lists__text"><span>{{contributor.amount | currency : $ : 0}}</span></p>
       </div>
@@ -30,7 +30,7 @@
     <!-- Contributions: Recent Contributions -->
     <div class="contribution-lists__list-container contribution-lists__recent">
       <p class="section-header section-header--main-white">// RECENT CONTRIBUTIONS</p>
-      <div class="contribution-lists__row" data-ng-repeat="contributor in RobotShowViewModel.contributions | orderBy:'created_at'" class="contributors">
+      <div class="contribution-lists__row" data-ng-repeat="contributor in RobotShowViewModel.contributions | orderBy:'-created_at' | limitTo: 8" class="contributors">
           <p class="font--m font-size--body contribution-lists__text">{{contributor.name}}</p>
           <p class="font--m font-size--body contribution-lists__text"><span>{{contributor.amount | currency : $ : 0}}</span></p>
       </div>
