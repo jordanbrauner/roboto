@@ -9,8 +9,6 @@
     ]);
 
   function FactoryFunction($resource) {
-    console.log("ContributionFactory function called!");
-
     var Contributions = $resource('http://localhost:3000/robots/:id/contributions',
       { id: '@_id' },
       {
@@ -23,7 +21,6 @@
         }
       }
     );
-
     return Contributions;
   }
 

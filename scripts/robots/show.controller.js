@@ -8,19 +8,24 @@
       "ContributionFactory",
       "$state",
       "$resource",
+      "$location",
+      "$anchorScroll",
       "$stateParams",
       ControllerFunction
     ]);
 
-  function ControllerFunction(RobotFactory, ContributionFactory, $state, $resource, $stateParams) {
-
-    // Scroll to top of page on state change
-    $("html, body").animate({ scrollTop: 0 }, 200);
+  function ControllerFunction(RobotFactory, ContributionFactory, $state, $resource, $location, $anchorScroll, $stateParams) {
 
     // Variables: Core
     var vm = this,
-        contributing = false,
-        campaignRunning = true;
+    contributing = false,
+    campaignRunning = true,
+    elBody = $("html, body");
+
+    // Scroll events
+    elBody.animate({ scrollTop: 0 }, 200);
+    $(".campaign-info__btn").on("click", function() { elBody.animate({ scrollTop: $("#scroll-to-contributions").offset().top - 105}, 200); });
+    vm.openContributionForm = function() { elBody.animate({ scrollTop: $(".make-a-difference").offset().top - 200}, 200); };
 
     // Variables: Contribution
     vm.totalPledged = 0;
@@ -46,7 +51,7 @@
     vm.newContribution = new ContributionFactory();
     vm.createContribution = function() {
       this.newContribution.$save({ id: $stateParams.id }, function(res) {
-        $state.go("robotShow", { id: $stateParams.id }, {reload: true});
+        $state.go("robotShow", { id: $stateParams.id }, { reload: true });
       });
     };
 

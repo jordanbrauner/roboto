@@ -3,10 +3,10 @@ Fonts
 *****************************/
 @import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,400i,600,700,700i";
 /*****************************
-Mixins
+Variables
 *****************************/
 /*****************************
-Variables
+Mixins
 *****************************/
 /**************************************************
 Section container
@@ -53,8 +53,8 @@ Header
 Middle Section
 **************************************************/
 .contribution-lists {
-  margin-top: 8em;
-  margin-bottom: 7em;
+  margin-top: 6.5em;
+  margin-bottom: 5.5em;
   min-width: 60em;
   display: flex;
   justify-content: space-around; }
@@ -66,8 +66,8 @@ Middle Section
   .contribution-lists__row {
     display: flex;
     justify-content: space-between;
-    padding: 0 0 0.5em 0;
-    margin: 1em 0 0 0;
+    padding: 0 0 0.25em 0;
+    margin: 0.5em 0 0 0;
     border-bottom: 1px solid white; }
   .contribution-lists__text {
     line-height: 1.65; }

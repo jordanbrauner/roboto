@@ -17,18 +17,15 @@
 
     var vm = this;
 
+    // Robot#new
     vm.robot = new RobotFactory();
-
     vm.create = function() {
-      console.log("Create function called. Robot is: " + this.robot);
       this.robot.$save(function(res) {
-        for (var i in res) {
-          console.log("This is the response to $save: " + res[i]);
-        }
-        $state.go("robotIndex", {}, {reload: true});
+        $state.go("robotIndex", {}, { reload: true });
       });
     };
 
+    // Form methods
     vm.formIsVisible = false;
     vm.toggleForm = function() {
       console.log("toggleForm called");

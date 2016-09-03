@@ -1,21 +1,7 @@
 /*****************************
 Fonts
 *****************************/
-
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,400i,600,700,700i';
-
-/*****************************
-Mixins
-*****************************/
-@mixin layoutPadding($padding) {
-  padding-left: $padding;
-  padding-right: $padding;
-}
-
-@mixin layoutMargin($margin) {
-  margin-left: $margin;
-  margin-right: $margin;
-}
 
 /*****************************
 Variables
@@ -43,3 +29,23 @@ $fontSizeAccentXL: 2.5em;
 // Layout
 $layoutMargin: 60px;
 $layoutMaxWidth: 1150px;
+
+/*****************************
+Mixins
+*****************************/
+@mixin layoutPadding($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin layoutMargin($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin user-select($none) {
+  -webkit-user-select: $none;
+     -moz-user-select: $none;
+      -ms-user-select: $none;
+          user-select: $none;
+}

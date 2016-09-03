@@ -33,7 +33,7 @@
       <p class="campaign-info__statistic-text campaign-info__pledged-of font--m">pledged of {{RobotShowViewModel.robot.cGoal | currency : $ : 0}}</p>
     </div>
     <!-- Row 3 -->
-    <button class="btn campaign-info__btn">Contribute Now</button>
+    <button class="btn campaign-info__btn" data-ng-click="RobotShowViewModel.goToContribute()">Contribute Now</button>
     <!-- Row 4 -->
     <div class="row-custom campaign-info__row">
       <div class="campaign-info__asterik font--m">*</div>
@@ -161,7 +161,7 @@
 </section>
 
 <!-- PARTIAL: Contributions -->
-<section class="contributions-container" data-ng-include="'/scripts/robots/contributions/_contributions.html'"></section>
+<section class="contributions-container" id="scroll-to-contributions" data-ng-include="'/scripts/robots/contributions/_contributions.html'"></section>
 
 <!-- PARTIAL: More Robots -->
 <section class="more-container" data-ng-include="'/scripts/robots/partials/_more.html'"></section>

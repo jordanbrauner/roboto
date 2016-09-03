@@ -32,10 +32,7 @@ Common design elements
   text-transform: uppercase;
   transition: all 0.2s ease;
   border-radius: 0;
-
-  &:hover {
-    cursor: pointer;
-  }
+  &:hover { cursor: pointer; }
 }
 
 .btn--white-border {
