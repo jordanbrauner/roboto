@@ -5,7 +5,7 @@
   angular
     .module("roboto", [
       "ui.router",
-      "robots",
+      "campaigns",
       "contributions"
     ])
     .config([
@@ -17,35 +17,31 @@
   function RouterFunction($stateProvider, $urlRouterProvider, $rootScope) {
 
     $stateProvider
-      // Welcome route
-
-      // Robot routes
-      .state("robotIndex", {
-        url: "/robots",
-        templateUrl: "scripts/robots/index.html",
-        controller: "RobotIndexController",
-        controllerAs: "RobotIndexViewModel"
+      // Campagin routes
+      .state("campaignIndex", {
+        url: "/campaigns",
+        templateUrl: "scripts/campaigns/index.html",
+        controller: "CampaignIndexController",
+        controllerAs: "CampaignIndexViewModel"
       })
-      .state("robotNew", {
-        url: "/robots/new",
-        templateUrl: "scripts/robots/new.html",
-        controller: "RobotNewController",
-        controllerAs: "RobotNewViewModel",
+      .state("campaignNew", {
+        url: "/campaigns/new",
+        templateUrl: "scripts/campaigns/new.html",
+        controller: "CampaignNewController",
+        controllerAs: "CampaignNewViewModel",
       })
-      .state("robotShow", {
-        url: "/robots/:id",
-        templateUrl: "scripts/robots/show.html",
-        controller: "RobotShowController",
-        controllerAs: "RobotShowViewModel"
+      .state("campaignShow", {
+        url: "/campaigns/:id",
+        templateUrl: "scripts/campaigns/show.html",
+        controller: "CampaignShowController",
+        controllerAs: "CampaignShowViewModel"
       })
-      .state("robotEdit", {
-        url: "/robots/:id/edit",
-        templateUrl: "scripts/robots/edit.html",
-        controller: "RobotEditController",
-        controllerAs: "RobotEditViewModel"
+      .state("campaignEdit", {
+        url: "/campaigns/:id/edit",
+        templateUrl: "scripts/campaigns/edit.html",
+        controller: "CampaignEditController",
+        controllerAs: "CampaignEditViewModel"
       })
-
-      // Contribution routes
 
       // User routes
 
@@ -57,8 +53,20 @@
         controllerAs: "RobotoAboutViewModel"
       });
 
-      $urlRouterProvider.otherwise("/robots");
-
+      $urlRouterProvider.otherwise("/campaigns");
   }
+
+  ////////////////////////////////////////////////////////////////////////////
+  // App
+  ////////////////////////////////////////////////////////////////////////////
+  var app = {
+
+    ////////////////////////////////////////////////
+    initialize: function() {
+    ////////////////////////////////////////////////
+
+    },
+  };
+
 
 })();

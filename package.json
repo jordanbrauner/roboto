@@ -1,8 +1,8 @@
 {
-  "name": "roboto-front-end",
+  "name": "roboto",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "A sci-fi themed crowdfunding app",
+  "main": "scripts/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,9 @@
     "grunt-contrib-cssmin": "^1.0.1",
     "grunt-contrib-htmlmin": "^2.0.0",
     "grunt-contrib-uglify": "^2.0.0"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "http://github.com/jordanbrauner/roboto.git"
   }
 }

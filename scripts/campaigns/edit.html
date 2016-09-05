@@ -1,0 +1,14 @@
+<div class="form-container">
+  <div id="form-about">
+    <h3>Change Information for {{CampaignEditViewModel.campaign.name}}</h3>
+    <p>Donec a condimentum nisl. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  </div>
+
+  <form>
+    <!-- PARTIAL: Form -->
+    <div data-ng-include="'/js/campaigns/partials/_campaign-edit-form.html'"></div>
+
+    <button type="button" data-ng-click='CampaignEditViewModel.update()'>Update</button>
+    <button type="button" data-ng-click='CampaignEditViewModel.delete({ id: CampaignEditViewModel.campaign.id })'>Delete</button>
+  </form>
+</div>

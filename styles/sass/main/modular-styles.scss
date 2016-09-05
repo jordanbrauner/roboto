@@ -53,7 +53,7 @@ Common design elements
 .vertical-rule { height: 100%; }
 .vertical-rule--thin { border-right: 1px solid $colorLightGray; }
 .vertical-rule--normal { border-right: 1px solid black; }
-.vertical-rule--robot-overview { height: 50px; }
+.vertical-rule--campaign-overview { height: 50px; }
 
 .section-background--light { background-color: $colorBackgroundLight; }
 
@@ -61,7 +61,7 @@ Common design elements
 Section elements
 **************************************************/
 
-// As seen at the top of the robots#index page
+// As seen at the top of the campaigns#index page
 .title-container {
   display: flex;
   justify-content: center;

@@ -12,19 +12,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> <!-- Angular -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
-  <!-- Scripts -->
+  <!-- Styles -->
   <link rel="stylesheet" type="text/css" href="/styles/css/main/import-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/core-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/font-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/modular-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/nav-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/home-styles.css">
-  <link rel="stylesheet" type="text/css" href="/styles/css/robots/index-styles.css">
-  <link rel="stylesheet" type="text/css" href="/styles/css/robots/show-styles.css">
-  <link rel="stylesheet" type="text/css" href="/styles/css/robots/form-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/campaigns/index-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/campaigns/show-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/campaigns/form-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/footer-styles.css">
-  <link rel="stylesheet" type="text/css" href="/styles/css/robots/contributions-styles.css">
-  <link rel="stylesheet" type="text/css" href="/styles/css/robots/more-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/campaigns/contributions-styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/css/campaigns/more-styles.css">
   <link rel="stylesheet" type="text/css" href="/styles/css/main/media-queries.css">
 </head>
 <body data-ng-app="roboto">
@@ -37,16 +37,16 @@
 
         <!-- Notice and Account -->
         <div class="notice-bar">
-            <div class="notice-bar__latest" data-ng-controller="RobotIndexController as RobotIndexViewModel">
-              <div data-ng-repeat="robot in RobotIndexViewModel.robots | limitTo:-1">
-                <p class="notice-bar__p notice-bar__p--dark font--m">Latest arrival:&nbsp;<a class="link link--dark link--hover-red" data-ui-sref="robotShow(robot)"><strong>{{robot.name}}</strong></a></p>
+            <div class="notice-bar__latest" data-ng-controller="CampaignIndexController as CampaignIndexViewModel">
+              <div data-ng-repeat="campaign in CampaignIndexViewModel.campaigns | limitTo:-1">
+                <p class="notice-bar__p notice-bar__p--dark font--m">Latest arrival:&nbsp;<a class="link link--dark link--hover-red" data-ui-sref="campaignShow(campaign)"><strong>{{campaign.name}}</strong></a></p>
               </div>
             </div>
             <div class="notice-bar__account">
               <div class="notice-bar__arrow">
                 <img src="/img/design-elements/box-arrow-notice.png" />
               </div>
-              <p class="notice-bar__p font--m font-color--r">New to Roboto?&nbsp;<a class="link link--nav-light link--hover-white" data-ui-sref="robotIndex"><strong>Sign up</strong></a></p>
+              <p class="notice-bar__p font--m font-color--r">New to Roboto?&nbsp;<a class="link link--nav-light link--hover-white" data-ui-sref="campaignIndex"><strong>Sign up</strong></a></p>
             </div>
           </div>
         </div>
@@ -54,14 +54,14 @@
         <!-- Logo and nav links -->
         <div class="main-nav">
           <div class="logo-container">
-            <a class="link" data-ui-sref="robotIndex"><img class="logo-container__img" src="img/roboto/roboto-logo-f.png" /></a>
+            <a class="link" data-ui-sref="campaignIndex"><img class="logo-container__img" src="img/roboto/roboto-logo-f.png" /></a>
           </div>
           <div class="nav-options-container">
-            <p class="nav-options-container__p"><a class="link link--dark link--hover-red font--m" data-ui-sref="robotIndex">WAREHOUSE</a></p>
+            <p class="nav-options-container__p"><a class="link link--dark link--hover-red font--m" data-ui-sref="campaignIndex">WAREHOUSE</a></p>
             <div class="main-nav__rule"></div>
-            <p class="nav-options-container__p"><a class="link link--dark link--hover-red font--m" data-ui-sref="robotoAbout">ABOUT</a></p>
+            <p class="nav-options-container__p"><a class="link link--dark link--hover-red font--m" data-ui-sref="campaignoAbout">ABOUT</a></p>
             <div class="main-nav__rule"></div>
-            <p class="nav-options-container__p"><a class="link link--dark link--hover-red font--m" data-ui-sref="robotNew">CAMPAIGN</a></p>
+            <p class="nav-options-container__p"><a class="link link--dark link--hover-red font--m" data-ui-sref="campaignNew">CAMPAIGN</a></p>
           </div>
         </div>
       </div>
@@ -80,32 +80,32 @@
 
       <!-- Left side of footer containing logo and copyright -->
       <div class="footer__left-col">
-        <a class="link--footer" data-ui-sref="robotIndex"><img class="footer__logo" src="/img/roboto/roboto-logo-footer.png"></a>
+        <a class="link--footer" data-ui-sref="campaignIndex"><img class="footer__logo" src="/img/roboto/roboto-logo-footer.png"></a>
         <p class="footer__copyright font--m">&copy; Copyright 20X4-RA-7S</p>
       </div>
 
       <!-- Right side of footer container containing nav links -->
       <div class="footer__right-col">
-        <a class="link link--footer link--hover-white font--m" data-ui-sref="robotIndex">WAREHOUSE</a>
+        <a class="link link--footer link--hover-white font--m" data-ui-sref="campaignIndex">WAREHOUSE</a>
         <div class="footer__rule--vertical"></div>
-        <a class="link link--footer link--hover-white font--m" data-ui-sref="robotoAbout">ABOUT</a>
+        <a class="link link--footer link--hover-white font--m" data-ui-sref="campaignoAbout">ABOUT</a>
         <div class="footer__rule--vertical"></div>
-        <a class="link link--footer link--hover-white font--m" data-ui-sref="robotNew">CAMPAIGN</a>
+        <a class="link link--footer link--hover-white font--m" data-ui-sref="campaignNew">CAMPAIGN</a>
       </div>
     </div>
   </footer>
 
-  <!-- Require Files -->
+  <!-- Scripts -->
   <script src="/scripts/app.js"></script>
-  <script src="/scripts/robots/robots.js"></script>
-  <script src="/scripts/robots/robot.factory.js"></script>
-  <script src="/scripts/robots/index.controller.js"></script>
-  <script src="/scripts/robots/show.controller.js"></script>
-  <script src="/scripts/robots/new.controller.js"></script>
-  <script src="/scripts/robots/edit.controller.js"></script>
+  <script src="/scripts/campaigns/campaigns.js"></script>
+  <script src="/scripts/campaigns/campaign.factory.js"></script>
+  <script src="/scripts/campaigns/index.controller.js"></script>
+  <script src="/scripts/campaigns/show.controller.js"></script>
+  <script src="/scripts/campaigns/new.controller.js"></script>
+  <script src="/scripts/campaigns/edit.controller.js"></script>
   <script src="/scripts/core/about.controller.js"></script>
-  <script src="/scripts/robots/contributions/contributions.js"></script>
-  <script src="/scripts/robots/contributions/contribution.factory.js"></script>
+  <script src="/scripts/campaigns/contributions/contributions.js"></script>
+  <script src="/scripts/campaigns/contributions/contribution.factory.js"></script>
 
 </body>
 </html>

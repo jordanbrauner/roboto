@@ -1,0 +1,237 @@
+/*****************************
+Fonts
+*****************************/
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,400i,600,700,700i";
+/*****************************
+Variables
+*****************************/
+/*****************************
+Mixins
+*****************************/
+/*************************
+ROBOT OVERVIEW (large image, funding overview)
+*************************/
+.campaign-overview {
+  margin: 0 60px 2em 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  /* Left Column */
+  /* Right Column - see .campaign-info */ }
+  .campaign-overview__left-col {
+    width: 60%;
+    max-height: 32.4em;
+    overflow: hidden; }
+  .campaign-overview__image {
+    position: relative;
+    width: 100%;
+    height: auto; }
+
+/* Also (.campaign-overview__right-col) */
+.campaign-info {
+  margin-top: .5em;
+  margin-left: 5%;
+  width: 35%; }
+  .campaign-info__statistic {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold; }
+  .campaign-info__statistic-text {
+    font-size: 0.75em;
+    color: #666666; }
+  .campaign-info__row {
+    margin-top: 1em;
+    margin-bottom: 1em; }
+  .campaign-info__row--padded {
+    padding: 0 1em; }
+  .campaign-info__col {
+    text-align: left; }
+  .campaign-info__pledged-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0 1em; }
+  .campaign-info__pledged-of {
+    position: relative;
+    top: 0.675em; }
+  .campaign-info__btn {
+    margin: 2em 0;
+    width: 100%;
+    height: 3.5em;
+    background-color: #d6371a;
+    color: white; }
+    .campaign-info__btn:focus {
+      color: white; }
+    .campaign-info__btn:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer; }
+  .campaign-info__asterik {
+    width: 4%;
+    margin-right: .5%;
+    position: relative;
+    text-align: center;
+    top: -.1em;
+    font-size: 1em;
+    font-weight: 600;
+    color: #808080; }
+  .campaign-info__disclaimer {
+    width: 45.5%;
+    margin-right: 10%;
+    color: #808080; }
+  .campaign-info__share {
+    width: 40%; }
+
+/*************************
+ROBOT NAME AND TAGLINE
+*************************/
+/* Splash Info */
+.campaign-heading-container {
+  display: flex;
+  justify-content: flex-start;
+  height: 5em; }
+
+.campaign-heading {
+  padding-left: 60px;
+  width: 65%;
+  display: flex;
+  align-items: center;
+  background-color: #000; }
+
+.campaign-heading__name {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 600;
+  letter-spacing: .05em;
+  color: white;
+  margin: 0 1em 0 0;
+  text-transform: uppercase; }
+
+.campaign-heading__tagline {
+  position: relative;
+  top: 0.15em;
+  margin-top: 0; }
+
+.campaign-heading__arrow-container {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-self: flex-end; }
+
+.campaign-heading__arrow {
+  width: 2.5em; }
+
+/*************************
+ROBOT BODY CONTAINER
+*************************/
+.campaign-body-container {
+  display: flex;
+  justify-content: center; }
+
+/* Content Container */
+.campaign-body {
+  margin: 2em 60px 5em 60px;
+  padding-top: 1em;
+  display: flex;
+  align-items: flex-start; }
+
+/*************************
+Main column
+*************************/
+.campaign-body__main-col {
+  width: 55%;
+  margin-right: 5%; }
+
+/* Bio and Gallery */
+.campaign-body__bio {
+  font-size: .9em;
+  line-height: 1.75em;
+  margin-bottom: 1.5em; }
+
+/*************************
+Side-bar
+*************************/
+.campaign-body__sidebar {
+  width: 35%;
+  padding: 0 0 0 5%;
+  box-sizing: content-box;
+  border-left: .1em solid lightgray; }
+
+/* Corporations */
+.corporation__col {
+  margin-right: 4em; }
+
+/* Statistics */
+.campaign-body__statistics-container {
+  margin-top: 4.25em; }
+
+.campaign-body__statistics {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 5em; }
+
+.statistics__circle {
+  min-width: 4em;
+  max-width: 4em;
+  min-height: 4em;
+  max-height: 4em;
+  margin-right: 1.5em;
+  border: 1px solid #666666;
+  border-radius: 360px;
+  text-align: center;
+  transition: border 0.25s ease;
+  text-align: center; }
+  .statistics__circle:hover {
+    cursor: default; }
+
+.statistics__number {
+  position: relative;
+  left: .61em;
+  display: flex;
+  align-self: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
+  transition: color 0.2s ease; }
+
+.statistics__name {
+  padding-top: .75em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #808080;
+  text-transform: uppercase;
+  transition: color 0.2s ease; }
+
+/* Hover effects */
+.statistics__circle--power:hover {
+  border: 1.5px solid #f17022; }
+  .statistics__circle--power:hover .statistics__number, .statistics__circle--power:hover .statistics__name {
+    color: #f17022; }
+
+.statistics__circle--energy:hover {
+  border: 1.5px solid #fdb813; }
+  .statistics__circle--energy:hover .statistics__number, .statistics__circle--energy:hover .statistics__name {
+    color: #fdb813; }
+
+.statistics__circle--agility:hover {
+  border: 1.5px solid #f68b1f; }
+  .statistics__circle--agility:hover .statistics__number, .statistics__circle--agility:hover .statistics__name {
+    color: #f68b1f; }
+
+.statistics__circle--armor:hover {
+  border: 1.5px solid #62c2cc; }
+  .statistics__circle--armor:hover .statistics__number, .statistics__circle--armor:hover .statistics__name {
+    color: #62c2cc; }
+
+/* Sidebar - Bottom (History, Pilots) */
+.campaign-body__sidebar-row {
+  display: flex; }
+
+.campaign-body__history-container {
+  width: 45%;
+  margin-right: 10%; }
+
+.campaign-body__pilots-container {
+  width: 45%; }
+
+/*# sourceMappingURL=show-styles.css.map */

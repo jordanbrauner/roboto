@@ -1,0 +1,23 @@
+<form class="form contribution-form max-width-container" data-ng-show="contributing">
+
+  <h2 class="contribution-header">ENTER PLEDGE AMOUNT</h2>
+
+  <div>
+    <label class="font--m font-size--sidebar">Name</label>
+    <input class="" placeholder="Your Name / Corporation Name" data-ng-model="CampaignShowViewModel.newContribution.name">
+  </div>
+  <div>
+    <label class="font--m font-size--sidebar">Amount</label>
+    <input class="" placeholder="How much would you like to donate?" data-ng-model="CampaignShowViewModel.newContribution.amount">
+  </div>
+
+  <div class="row-custom row-custom--just-center">
+    <button class="btn btn--white-border" type="button" data-ng-click="CampaignShowViewModel.createContribution()">Pledge</button>
+  </div>
+
+</form>
+
+<!-- <div id="contribution-form-right">
+  <h4>{{CampaignShowViewModel.campaign.corporation}}'s Goal: </h4>
+  <h2>{{CampaignShowViewModel.campaign.cGoal}}</h2>
+</div> -->

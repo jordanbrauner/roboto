@@ -1,0 +1,167 @@
+<!-- Campaign Overview (campaign image, campaign overview) -->
+<section class="campaign-overview max-width-container">
+
+  <!-- Campaign image -->
+  <div class="campaign-overview__left-col">
+    <img class="campaign-overview__image" data-ng-src="{{CampaignShowViewModel.campaign.photoUrl}}"/>
+  </div>
+
+  <!-- Campaign Information -->
+  <div class="campaign-overview__right-col campaign-info">
+    <p class="section-header section-header--primary">// CAMPAIGN STATUS</p>
+    <!-- Row 1 -->
+    <div class="row-custom row-custom--align-center row-custom--just-between campaign-info__row campaign-info__row--padded">
+      <div class="campaign-info__contributors campaign-info__col">
+        <h3 class="campaign-info__statistic .font--mc font-size--accent-lg">{{CampaignShowViewModel.totalContributors}}</h3>
+        <p class="campaign-info__statistic-text font--m">Contributors</p>
+      </div>
+      <div class="vertical-rule vertical-rule--thin vertical-rule--campaign-overview"></div>
+      <div class="campaign-info__days-left campaign-info__col">
+        <h3 class="campaign-info__statistic .font--mc font-size--accent-lg" id="days-left"></h3>
+        <p class="campaign-info__statistic-text font--m">Days left</p>
+      </div>
+      <div class="vertical-rule vertical-rule--thin vertical-rule--campaign-overview"></div>
+      <div class="campaign-info__campaign campaign-info__col">
+        <h3 class="campaign-info__statistic .font--mc font-size--accent-lg">3</h3>
+        <p class="campaign-info__statistic-text font--m">Manufactured</p>
+      </div>
+    </div>
+    <div class="horizontal-rule horizontal-rule--thin"></div>
+    <!-- Row 2 -->
+    <div class="campaign-info__pledged-container">
+      <h3 class="campaign-info__statistic .font--mc font-size--accent-lg">{{CampaignShowViewModel.totalPledged | currency : $ : 0}}&nbsp;</h3>
+      <p class="campaign-info__statistic-text campaign-info__pledged-of font--m">pledged of {{CampaignShowViewModel.campaign.cGoal | currency : $ : 0}}</p>
+    </div>
+    <!-- Row 3 -->
+    <button class="btn campaign-info__btn" data-ng-click="CampaignShowViewModel.goToContribute()">Contribute Now</button>
+    <!-- Row 4 -->
+    <div class="row-custom campaign-info__row">
+      <div class="campaign-info__asterik font--m">*</div>
+      <div class="campaign-info__disclaimer font--m font-size--accent-sm">Have you ever tried just turning off the TV, sitting down with your children, and hitting them? Bender?! You stole the atom. Oh, I think we should.</div>
+      <div class="campaign-info__share section-header section-header--no-rule">// SHARE</div>
+    </div>
+  </div>
+</section>
+
+<!-- Name and tagline container -->
+<div class="campaign-heading-container section-background--light">
+  <div class="campaign-heading">
+    <a class="link" data-ui-sref="campaignEdit({id: CampaignShowViewModel.campaign.id })"><h3 class="campaign-heading__name font-size--accent-xl">{{CampaignShowViewModel.campaign.name}}</h3></a>
+    <h4 class="campaign-heading__tagline section-header--stylized font-color--r">{{CampaignShowViewModel.campaign.tagline}}</h4>
+  </div>
+  <div class="campaign-heading__arrow-container">
+    <img class="campaign-heading__arrow" src="/img/design-elements/box-arrow.png" />
+  </div>
+</div>
+
+<!-- Container for Campaign Show -->
+<section class="campaign-body-container section-background--light">
+  <div class="campaign-body max-width-container">
+
+    <!-- Left body container (Bio, Gallery) -->
+    <div class="campaign-body__main-col">
+      <!-- Bio -->
+      <p class="section-header section-header--primary">// OVERVIEW</p>
+      <p class="campaign-body__bio font--m">{{CampaignShowViewModel.campaign.bio}}</p>
+      <p class="campaign-body__bio font--m"><strong>THE NEXT GENERATION</strong></p>
+      <p class="campaign-body__bio font--m">I love you, buddy! Ask her how her day was. Tell her you just want to talk. It has nothing to do with mating. Can I use the gun? And I’d do it again! And perhaps a third time! But that would be it. Well, then good news! It’s a suppository. No! I want to live! There are still too many things I don’t own! With a warning label this big, you know they gotta be fun! And I’d do it again!</p>
+      <p class="campaign-body__bio font--m">And perhaps a third time! But that would be it. Well, then good news! It’s a suppository. No! I want to live! There are still too many things I don’t own! With a warning label this big, you know they gotta be fun! third time! But that would be it. Well, then good news! It’s a suppository. No! I want to live! There are still too many things I don’t own! With a warning label this big, you know they gotta be fun! And I’d do it again!</p>
+      <p class="campaign-body__bio font--m"><strong>WE'RE IN THIS TOGETHER</strong></p>
+      <p class="campaign-body__bio font--m">It’s a suppository. No! I want to live! There are still too many things I don’t own! With a warning label this big, you know they gotta be fun! third time! But that would be it. There are still too many things I don’t own! With a warning label this big, you know they gotta be fun! And I’d do it again!</p>
+    </div>
+
+    <!-- Right content container (Statistics, History, Pilots) -->
+    <div class="campaign-body__sidebar">
+
+      <!-- Sidebar: Corporation -->
+      <div class="campaign-body__corporation">
+        <p class="section-header section-header--primary">// CORPORATION</p>
+        <div class="section-header section-header--no-rule"><strong>{{CampaignShowViewModel.campaign.corporation}}</strong></div>
+        <p class="font--m font-size--sidebar">A leader in Kaiju defense for 25 years. Have you ever tried just turning off the TV, sitting down with your children, and hitting them? Bender?! You stole the atom. Oh, I think we should just stay friends.</p>
+        <div class="horizontal-rule horizontal-rule--thin"></div>
+        <div class="row-custom">
+          <div class="corporation__col">
+            <p class="font--m font-size--sidebar">Country:&nbsp;<strong>Japan</strong></p>
+            <p class="font--m font-size--sidebar">Founded:&nbsp;<strong>2012</strong></p>
+          </div>
+          <div class="corporation__col vertical-rule--thin"></div>
+          <div class="corporation__col">
+            <p class="font--m font-size--sidebar">Campaigns built:&nbsp;<strong>42</strong></p>
+            <p class="font--m font-size--sidebar">WRA Rating:&nbsp;<strong>AAA</strong></p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Sidebar: Statistics -->
+      <div class="campaign-body__statistics-container">
+        <p class="section-header section-header--primary">// STATISTICS</p>
+
+        <div class="campaign-body__statistics">
+          <div class="statistics__circle statistics__circle--power">
+            <h4 class="statistics__number font-size--accent-lg">{{CampaignShowViewModel.campaign.sPower}}</h4>
+            <p class="statistics__name font-size--sidebar">Power</p>
+          </div>
+          <div class="statistics__circle statistics__circle--energy">
+            <h4 class="statistics__number font-size--accent-lg">{{CampaignShowViewModel.campaign.sEnergy}}</h4>
+            <p class="statistics__name font-size--sidebar">Energy</p>
+          </div>
+          <div class="statistics__circle statistics__circle--agility">
+            <h4 class="statistics__number font-size--accent-lg">{{CampaignShowViewModel.campaign.sAgility}}</h4>
+            <p class="statistics__name font-size--sidebar">Agility</p>
+          </div>
+          <div class="statistics__circle statistics__circle--armor">
+            <h4 class="statistics__number font-size--accent-lg">{{CampaignShowViewModel.campaign.sArmor}}</h4>
+            <p class="statistics__name font-size--sidebar">Armor</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom right section of campaign stats -->
+      <div class="campaign-body__sidebar-row">
+
+        <!-- History -->
+        <div class="campaign-body__history-container">
+          <h4 class="section-header section-header--secondary">// HISTORY</h4>
+          <p class="font--m font-size--sidebar">Name: <strong>{{CampaignShowViewModel.campaign.name}}</strong></p>
+          <p class="font--m font-size--sidebar">Manufacturer: <strong>{{CampaignShowViewModel.campaign.corporation}}</strong></p>
+          <p class="font--m font-size--sidebar">Country: <strong>{{CampaignShowViewModel.campaign.country}}</strong></p>
+          <p class="font--m font-size--sidebar">Class: <strong>{{CampaignShowViewModel.campaign.rClass}}</strong></p>
+          <p class="font--m font-size--sidebar">Year: <strong>{{CampaignShowViewModel.campaign.year}}</strong></p>
+        </div>
+
+        <!-- Pilots -->
+        <div class="campaign-body__pilots-container">
+          <h4 class="section-header section-header--secondary">// PILOT</h4>
+          <div>
+            <p class="font--m font-size--sidebar"><strong>{{CampaignShowViewModel.campaign.pLName}}</strong></p>
+            <p class="font--m font-size--sidebar">Nationality: {{CampaignShowViewModel.campaign.pLNationality}}</p>
+            <p class="font--m font-size--sidebar">Missions: {{CampaignShowViewModel.campaign.pLBattles}}</p>
+          </div>
+          <br  />
+          <h4 class="section-header section-header--secondary">// FIRST OFFICER</h4>
+          <div>
+            <p class="font--m font-size--sidebar"><strong>{{CampaignShowViewModel.campaign.pRName}}</strong></p>
+            <p class="font--m font-size--sidebar">Nationality: {{CampaignShowViewModel.campaign.pRNationality}}</p>
+            <p class="font--m font-size--sidebar">Missions: {{CampaignShowViewModel.campaign.pRBattles}}</p>
+          </div>
+
+        </div>
+
+      <!-- END: History and Pilots container  -->
+      </div>
+
+    <!-- END: Sidebar container and its container -->
+    </div>
+
+  <!-- END: Show container -->
+  </div>
+
+<!-- END: Robo body container -->
+</section>
+
+<!-- PARTIAL: Contributions -->
+<section class="contributions-container" id="scroll-to-contributions" data-ng-include="'/scripts/campaigns/contributions/_contributions.html'"></section>
+
+<!-- PARTIAL: More Campaigns -->
+<section class="more-container" data-ng-include="'/scripts/campaigns/partials/_more.html'"></section>

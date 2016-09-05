@@ -1,0 +1,45 @@
+<label>Name</label>
+<input placeholder="Name" data-ng-model="CampaignEditViewModel.campaign.name">
+<label>Tagline</label>
+<input placeholder="Tagline" data-ng-model="CampaignEditViewModel.campaign.tagline">
+<label>Photo Url</label>
+<input placeholder="http://www.url.com/" data-ng-model="CampaignEditViewModel.campaign.photoUrl">
+<label>Bio</label>
+<textarea placeholder="Bio" data-ng-model="CampaignEditViewModel.campaign.bio"></textarea>
+<label>Funding Goal</label>
+<input placeholder="$100,000.00" data-ng-model="CampaignEditViewModel.campaign.cGoal">
+<label>Country</label>
+<input placeholder="Country" data-ng-model="CampaignEditViewModel.campaign.country">
+<label>Class <span><em>(AAA, AA, A, B, C, X, Z)</em></span></label>
+<input placeholder="Class" data-ng-model="CampaignEditViewModel.campaign.rClass">
+<label>Corporation</label>
+<input placeholder="Corporation" data-ng-model="CampaignEditViewModel.campaign.corporation">
+<label>Year Built</label>
+<input placeholder="Year Built" data-ng-model="CampaignEditViewModel.campaign.year">
+<label>WRA Rating <span><em>(1 – 10)</em></span></label>
+<div id="wra-rating">
+  <input placeholder="Power (1-10)" data-ng-model="CampaignEditViewModel.campaign.sPower">
+  <input placeholder="Energy (1-10)" data-ng-model="CampaignEditViewModel.campaign.sEnergy">
+  <input placeholder="Agility (1-10)" data-ng-model="CampaignEditViewModel.campaign.sAgility">
+  <input placeholder="Armor (1-10)" data-ng-model="CampaignEditViewModel.campaign.sArmor">
+</div>
+<div id="form-pilot">
+  <div>
+    <p><em>Pilot</em></p>
+    <label>Name</label>
+    <input placeholder="Name" data-ng-model="CampaignEditViewModel.campaign.pLName">
+    <label>Nationality</label>
+    <input placeholder="Nationality" data-ng-model="CampaignEditViewModel.campaign.pLNationality">
+    <label>Battles Won</label>
+    <input placeholder="Battles Won" data-ng-model="CampaignEditViewModel.campaign.pLBattles">
+  </div>
+  <div>
+    <p><em>First Officer</em></p>
+    <label>Name</label>
+    <input placeholder="Name" data-ng-model="CampaignEditViewModel.campaign.pRName">
+    <label>Nationality</label>
+    <input placeholder="Nationality" data-ng-model="CampaignEditViewModel.campaign.pRNationality">
+    <label>Battles Won</label>
+    <input placeholder="Battles Won" data-ng-model="CampaignEditViewModel.campaign.pRBattles">
+  </div>
+</div>

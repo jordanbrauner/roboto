@@ -53,8 +53,7 @@ Fonts
 
 .link, .link:visited, .link:active, .link:focus, .link:hover {
   text-decoration: none;
-  margin: 0;
-  color: black; }
+  margin: 0; }
 
 .link--dark {
   color: black; }

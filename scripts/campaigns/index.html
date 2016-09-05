@@ -1,0 +1,32 @@
+<!-- <div class="jumbo-image container-fluid shadow" data-ng-style="{'background-image': 'url(http://jordanbrauner.github.io/roboto/jaegar-1.jpg)'}"></div> -->
+
+<!-- Name and tagline container -->
+<!-- <div class="jumbo-image__heading">
+  <div class="jumbo-image__row">
+    <h3 class="jumbo-image__title" id="campaign-name">Toro One</h3>
+    <h4 class="jumbo-image__subtitle" id="campaign-tagline">Coming December 2120</h4>
+  </div>
+  <div class="jumbo-image__arrow-container">
+    <img class="jumbo-image__arrow" src="/img/design-elements/box-arrow.png" />
+  </div>
+</div> -->
+
+<div class="title-container__title-container">
+  <h2 class="title-container__title">The Warehouse</h2>
+  <div class="title-container__subtitle-container">
+    <div class="title-container__title-rule"></div>
+    <h4 class="title-container__subtitle">Robots Worth Fighting For</h4>
+    <div class="title-container__title-rule"></div>
+  </div>
+</div>
+
+<section class="warehouse">
+  <div data-ng-repeat="campaign in CampaignIndexViewModel.campaigns | limitTo:16">
+        <div class="campaign">
+          <a class="link link--dark link--hover-black" data-ui-sref="campaignShow({id: campaign.id})">
+            <div class="lazy campaign__image" data-ng-style="{'background-image': 'url(' + campaign.photoUrl + ')'}"></div>
+            <h3 class="campaign__name">{{campaign.name}}</h3>
+          </a>
+      </div>
+  </div>
+</section>

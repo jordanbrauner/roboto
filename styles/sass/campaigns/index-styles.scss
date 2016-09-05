@@ -1,0 +1,49 @@
+@import "../main/import-styles.scss";
+
+/**************************************************
+Index Styles
+**************************************************/
+
+// Robot#Index display
+
+.warehouse {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 20em;
+  margin-top: 4em;
+  padding: 0 6em 10em 6em;
+  padding-bottom: 10em;
+}
+
+/* Robot cards */
+.campaign {
+  margin: 0em 0.5em 0em 0.5em;
+  height: 17em;
+  width: 15em;
+  background-color: #white;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &__name {
+    font-family: $fontPrimaryCondensed;
+    font-size: 1.35em;
+    margin: .25em 0 0 0;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  &__image {
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 13em;
+  }
+}

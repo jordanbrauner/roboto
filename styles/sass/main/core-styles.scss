@@ -23,7 +23,7 @@ body { min-width: 950px; }
 
 // Layout - Max-Width
 .max-width-container, #index-width-limit, #about-width-limit,
-#more-width-limit.ng-scope, .robot-overview.ng-scope {
+#more-width-limit.ng-scope, .campaign-overview.ng-scope {
   align-self: center;
   max-width: $layoutMaxWidth;
 }

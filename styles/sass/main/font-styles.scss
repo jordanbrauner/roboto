@@ -35,8 +35,8 @@ Fonts
 .link, .link:visited, .link:active, .link:focus, .link:hover {
   text-decoration: none;
   margin: 0;
-  color: black;
 }
+
 .link--dark { color: black; }
 .link--light { color: white; }
 .link--hover-red:hover { color: $colorAccent; }
